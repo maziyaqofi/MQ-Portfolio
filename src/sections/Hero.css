@@ -1,0 +1,246 @@
+.hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero__desktop {
+  display: none;
+}
+
+.hero__mobile {
+  position: relative;
+  height: calc(100svh - 104px);
+  overflow: hidden;
+  background: #fce7f3;
+}
+
+.hero__mobile-image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 10;
+  height: 100svh;
+  max-height: 920px;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  transform: translate(-50%, 15%);
+}
+
+.hero__mobile-card {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  min-height: 36%;
+  padding: 6rem 3.5rem 4rem;
+  clip-path: polygon(0 22%, 100% 0, 100% 100%, 0 100%);
+  background: rgba(8, 13, 22, 0.95);
+  color: #ffffff;
+}
+
+.hero__mobile-copy {
+  position: relative;
+  z-index: 10;
+  padding-right: 4rem;
+}
+
+.hero__mobile-eyebrow,
+.hero__mobile-title {
+  color: #fce7f3;
+}
+
+.hero__mobile-eyebrow {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.hero__mobile-title {
+  margin-top: 0.5rem;
+  font-size: clamp(1.5rem, 6vw, 1.75rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.hero__mobile-role {
+  margin-top: 0.75rem;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 350;
+  font-style: italic;
+  line-height: 1.25;
+}
+
+.hero__socials {
+  display: flex;
+}
+
+.hero__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.hero__socials--mobile {
+  position: absolute;
+  right: 2.75rem;
+  bottom: 4rem;
+  z-index: 30;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero__social-link--mobile {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  background: #ec4899;
+  color: #080d16;
+  font-size: 1.875rem;
+}
+
+.hero__social-link--mobile:hover {
+  background: #ffffff;
+  transform: scale(1.1);
+}
+
+@media (max-width: 420px) {
+  .hero__mobile-card {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  .hero__mobile-copy {
+    padding-right: 3.25rem;
+  }
+
+  .hero__mobile-title {
+    font-size: 1.5rem;
+  }
+
+  .hero__socials--mobile {
+    right: 1.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero__mobile-title {
+    font-size: 1.35rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__mobile {
+    display: none;
+  }
+
+  .hero__desktop {
+    display: flex;
+    height: calc(100vh - 96px);
+  }
+
+  .hero__content {
+    position: relative;
+    display: flex;
+    width: 48%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 7rem;
+    background: #080d16;
+    color: #ffffff;
+  }
+
+  .hero__copy {
+    position: relative;
+    z-index: 10;
+    max-width: 48rem;
+  }
+
+  .hero__eyebrow {
+    margin-bottom: 3rem;
+    color: #fce7f3;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .hero__title {
+    color: #fce7f3;
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: 0;
+  }
+
+  .hero__role {
+    margin-top: 1.5rem;
+    font-style: italic;
+    color: #fce7f3;
+    font-size: clamp(1.35rem, 1.7vw, 1.5rem);
+    font-weight: 350;
+    line-height: 1.2;
+  }
+
+  .hero__socials--desktop {
+    position: relative;
+    z-index: 10;
+    gap: 2rem;
+    margin-top: 8rem;
+  }
+
+  .hero__social-link--desktop {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: #fce7f3;
+    color: #ec4899;
+    font-size: 1.875rem;
+  }
+
+  .hero__social-link--desktop:hover {
+    background: #ec4899;
+    color: #ffffff;
+    transform: translateY(-4px);
+  }
+
+  .hero__portrait-panel {
+    position: relative;
+    display: block;
+    flex: 1;
+    overflow: hidden;
+    background: #fce7f3;
+  }
+
+  .hero__desktop-diagonal {
+    position: absolute;
+    top: 0;
+    left: -12rem;
+    width: 20rem;
+    height: 100%;
+    background: #080d16;
+    transform: skewX(-12deg);
+  }
+
+  .hero__desktop-image {
+    position: absolute;
+    bottom: 0;
+    left: 4rem;
+    z-index: 10;
+    height: 115%;
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+    transform: translateY(15%);
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero__content {
+    padding-right: 8rem;
+    padding-left: 8rem;
+  }
+}
