@@ -6,17 +6,17 @@ import "./Hero.css"
 const socials = [
   {
     label: "Email Maziya",
-    href: "mailto:maziya@example.com",
+    href: "mailto:qofimaziya@gmail.com",
     icon: <MdAlternateEmail />,
   },
   {
     label: "Maziya on GitHub",
-    href: "https://github.com/",
+    href: "https://github.com/maziyaqofi",
     icon: <FaGithub />,
   },
   {
     label: "Maziya on LinkedIn",
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/in/maziyaqofi",
     icon: <FaLinkedinIn />,
   },
 ]

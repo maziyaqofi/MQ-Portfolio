@@ -100,7 +100,7 @@
   height: 2.75rem;
   border-radius: 999px;
   background: #ec4899;
-  color: #080d16;
+  color: #0D111A;
   font-size: 1.875rem;
 }
 
@@ -151,7 +151,7 @@
     flex-direction: column;
     justify-content: center;
     padding: 0 7rem;
-    background: #080d16;
+    background: #0D111A;
     color: #ffffff;
   }
 
@@ -221,7 +221,7 @@
     left: -12rem;
     width: 20rem;
     height: 100%;
-    background: #080d16;
+    background: #0D111A;
     transform: skewX(-12deg);
   }
 
