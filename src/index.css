@@ -11,3 +11,32 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee__content {
+  display: flex;
+  gap: 6rem;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee__content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

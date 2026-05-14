@@ -40,7 +40,7 @@ function SocialLinks({ variant }) {
 
 function Hero() {
   return (
-    <section id="home" className="hero">
+    <section className="hero">
       <div className="hero__desktop">
         <div className="hero__content">
           <div className="hero__copy">

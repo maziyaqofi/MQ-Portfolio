@@ -3,6 +3,13 @@ import cssLogo from "../assets/css.svg"
 import jsLogo from "../assets/javascript.svg"
 import reactLogo from "../assets/react.svg"
 import tailwindLogo from "../assets/tailwindcss.svg"
+import nodejsLogo from "../assets/nodejs.svg"
+import mysqlLogo from "../assets/mysql.svg"
+import mongodbLogo from "../assets/mongodb.svg"
+import pythonLogo from "../assets/python.svg"
+import figmaLogo from "../assets/figma.svg"
+import gitLogo from "../assets/git.svg"
+import githubLogo from "../assets/github.svg"
 
 import {
   FaPencilRuler,
@@ -161,7 +168,7 @@ function AboutSkills() {
     <div className="mt-28 flex justify-center">
 
     <a
-        href="/about"
+        href="/about-me"
         className="
         border-l-2
         border-r-2
@@ -200,7 +207,7 @@ function AboutSkills() {
     {/* CONTENT */}
     <div className="mx-auto mt-24 max-w-5xl">
 
-        {/* SUBTITLE */}
+        {/* SUBTITLE USING NOW */}
         <h3 className="text-[24px] font-bold tracking-[4px] text-[#1B1B1B]">
         USING NOW:
         </h3>
@@ -266,6 +273,134 @@ function AboutSkills() {
         <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
             Tailwind
         </h4>
+        </div>
+
+        </div>
+
+        {/* LEARNING */}
+        <div className="mt-28">
+
+        <h3 className="text-[24px] font-bold tracking-[4px] text-[#1B1B1B]">
+            LEARNING:
+        </h3>
+
+        {/* GRID */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-16">
+
+            {/* NODE JS */}
+            <div className="flex flex-col items-center">
+            <img
+            src={nodejsLogo}
+            alt="HTML"
+            className="w-20 h-20 object-contain"
+            />
+            <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
+                NODE JS
+            </h4>
+
+            </div>
+
+            {/* EXPRESS */}
+            <div className="flex flex-col items-center">
+
+            <img
+            src={mysqlLogo}
+            alt="HTML"
+            className="w-20 h-20 object-contain"
+            />
+
+            <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
+                MySQL
+            </h4>
+
+            </div>
+
+            {/* MONGODB */}
+            <div className="flex flex-col items-center">
+            <img
+            src={mongodbLogo}
+            alt="HTML"
+            className="w-20 h-20 object-contain"
+            />
+            <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
+                MONGODB
+            </h4>
+
+            </div>
+
+            {/* PYTHON */}
+            <div className="flex flex-col items-center">
+            <img
+            src={pythonLogo}
+            alt="HTML"
+            className="w-20 h-20 object-contain"
+            />
+
+            <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
+                PYTHON
+            </h4>
+
+            </div>
+
+        </div>
+
+        </div>
+
+        {/* OTHER SKILLS */}
+        <div className="mt-28">
+
+        <h3 className="text-[24px] font-bold tracking-[4px] text-[#1B1B1B]">
+            OTHER SKILLS:
+        </h3>
+
+        {/* GRID */}
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-16">
+
+            {/* GIT */}
+            <div className="flex flex-col items-center">
+            <img
+            src={gitLogo}
+            alt="HTML"
+            className="w-20 h-20 object-contain"
+            />
+
+            <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
+                GIT
+            </h4>
+
+            </div>
+
+            {/* GITHUB */}
+            <div className="flex flex-col items-center">
+
+            <img
+            src={githubLogo}
+            alt="HTML"
+            className="w-20 h-20 object-contain"
+            />
+
+            <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
+                GITHUB
+            </h4>
+
+            </div>
+
+            {/* FIGMA */}
+            <div className="flex flex-col items-center">
+
+            <img
+            src={figmaLogo}
+            alt="HTML"
+            className="w-20 h-20 object-contain"
+            />
+
+            <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
+                FIGMA
+            </h4>
+
+            </div>
+
+
         </div>
 
         </div>

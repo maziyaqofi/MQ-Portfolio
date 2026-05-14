@@ -99,7 +99,7 @@
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 999px;
-  background: #ec4899;
+  background: #e32277;
   color: #0D111A;
   font-size: 1.875rem;
 }
@@ -197,12 +197,12 @@
     width: 3.5rem;
     height: 3.5rem;
     background: #fce7f3;
-    color: #ec4899;
+    color: #e32277;
     font-size: 1.875rem;
   }
 
   .hero__social-link--desktop:hover {
-    background: #ec4899;
+    background: #e32277;
     color: #ffffff;
     transform: translateY(-4px);
   }

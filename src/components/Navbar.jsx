@@ -2,15 +2,17 @@ import { HiMenuAlt3 } from "react-icons/hi"
 import "./Navbar.css"
 
 const menuItems = [
-  "Home",
-  "About me",
-  "Skills",
-  "Portofolio",
-  "Certificate",
-  "Dokumentasi",
+  { label: "Home", href: "/" },
+  { label: "About me", href: "/about-me" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Portofolio", href: "/portofolio" },
+  { label: "Certificate", href: "/#certificate" },
+  { label: "Dokumentasi", href: "/#dokumentasi" },
 ]
 
 function Navbar() {
+  const currentPath = window.location.pathname
+
   return (
     <nav className="navbar">
       <h1 className="navbar__logo">
@@ -20,16 +22,16 @@ function Navbar() {
 
       <ul className="navbar__menu">
         {menuItems.map((item) => (
-          <li key={item}>
+          <li key={item.label}>
             <a
-              href={`#${item.toLowerCase().replaceAll(" ", "-")}`}
+              href={item.href}
               className={
-                item === "Home"
+                currentPath === item.href
                   ? "navbar__link navbar__link--active"
                   : "navbar__link"
               }
             >
-              {item}
+              {item.label}
             </a>
           </li>
         ))}
