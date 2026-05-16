@@ -53,7 +53,7 @@ function Hero() {
             </h1>
 
             <p className="hero__role">
-              Front-end Developer / UI Designer
+              Frontend Developer & AI Tech Enthusiast
             </p>
           </div>
 
@@ -89,7 +89,7 @@ function Hero() {
             </h1>
 
             <p className="hero__mobile-role">
-              Front-end Developer / UI Designer
+              Frontend Developer & AI Tech Enthusiast
             </p>
           </div>
         </div>

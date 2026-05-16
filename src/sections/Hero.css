@@ -43,7 +43,7 @@
 .hero__mobile-copy {
   position: relative;
   z-index: 10;
-  padding-right: 4rem;
+  padding-right: 3.25rem;
 }
 
 .hero__mobile-eyebrow,
@@ -59,7 +59,7 @@
 
 .hero__mobile-title {
   margin-top: 0.5rem;
-  font-size: clamp(1.5rem, 6vw, 1.75rem);
+  font-size: clamp(1.65rem, 6.5vw, 1.95rem);
   font-weight: 800;
   line-height: 1.12;
   letter-spacing: 0;
@@ -69,10 +69,11 @@
 .hero__mobile-role {
   margin-top: 0.75rem;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: clamp(0.78rem, 3.3vw, 0.95rem);
   font-weight: 350;
   font-style: italic;
   line-height: 1.25;
+  white-space: nowrap;
 }
 
 .hero__socials {
@@ -116,11 +117,11 @@
   }
 
   .hero__mobile-copy {
-    padding-right: 3.25rem;
+    padding-right: 2.75rem;
   }
 
   .hero__mobile-title {
-    font-size: 1.5rem;
+    font-size: 1.62rem;
   }
 
   .hero__socials--mobile {
@@ -130,7 +131,11 @@
 
 @media (max-width: 360px) {
   .hero__mobile-title {
-    font-size: 1.35rem;
+    font-size: 1.45rem;
+  }
+
+  .hero__mobile-role {
+    font-size: 0.75rem;
   }
 }
 
@@ -181,9 +186,10 @@
     margin-top: 1.5rem;
     font-style: italic;
     color: #fce7f3;
-    font-size: clamp(1.35rem, 1.7vw, 1.5rem);
+    font-size: clamp(1rem, 1.25vw, 1.15rem);
     font-weight: 350;
     line-height: 1.2;
+    white-space: nowrap;
   }
 
   .hero__socials--desktop {

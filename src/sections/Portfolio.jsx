@@ -1,7 +1,4 @@
-import { useState } from "react"
-
 function Portfolio() {
-    const [activeTab, setActiveTab] = useState("all")
     return (
     <section
       id="portfolio"
@@ -21,85 +18,10 @@ function Portfolio() {
 
         </div>
 
-        {/* FILTER MENU */}
-        <div className="mt-20">
-
-        {/* MENU */}
-        <div className="flex items-center justify-around">
-
-            <button
-            onClick={() => setActiveTab("all")}
-            className={`
-                pb-4 text-[22px] font-semibold transition
-                ${activeTab === "all"
-                ? "text-[#F5D3DC]"
-                : "text-pink-400 hover:text-[#F5D3DC]"
-                }
-            `}
-            >
-            ALL
-            </button>
-
-            <button
-            onClick={() => setActiveTab("frontend")}
-            className={`
-                pb-4 text-[22px] font-semibold transition
-                ${activeTab === "frontend"
-                ? "text-[#F5D3DC]"
-                : "text-pink-400 hover:text-[#F5D3DC]"
-                }
-            `}
-            >
-            Frontend
-            </button>
-
-            <button
-            onClick={() => setActiveTab("uiux")}
-            className={`
-                pb-4 text-[22px] font-semibold transition
-                ${activeTab === "uiux"
-                ? "text-[#F5D3DC]"
-                : "text-pink-400 hover:text-[#F5D3DC]"
-                }
-            `}
-            >
-            UI/UX
-            </button>
-
-            <button
-            onClick={() => setActiveTab("ml")}
-            className={`
-                pb-4 text-[22px] font-semibold transition
-                ${activeTab === "ml"
-                ? "text-[#F5D3DC]"
-                : "text-pink-400 hover:text-[#F5D3DC]"
-                }
-            `}
-            >
-            Machine Learning
-            </button>
-
-        </div>
-
-        {/* LINE */}
-        <div className="relative h-[1px] w-full bg-gray-300">
-
-            {/* ACTIVE LINE */}
-            <div className={`
-                absolute top-0 h-[3px] bg-pink-500 transition-all duration-300
-                ${activeTab === "all" && "left-0 w-1/8"}
-                ${activeTab === "frontend" && "left-1/4 w-1/8"}
-                ${activeTab === "uiux" && "left-2/4 w-1/8"}
-                ${activeTab === "ml" && "left-3/4 w-1/8"}
-            `}
-            />
-
-        </div>
-
-        </div>
+        
 
         {/* PROJECT GRID */}
-        <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+        <div className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols- gap-10">
 
         {/* PROJECT CARD */}
         <div className="overflow-hidden rounded-2xl bg-[#161B22]">
@@ -111,7 +33,7 @@ function Portfolio() {
             <div className="p-6">
 
             <h3 className="text-[24px] font-bold text-white">
-                MQ Portfolio
+                MQ Portfolio 1
             </h3>
 
             <p className="mt-4 text-[16px] leading-relaxed text-gray-300">
@@ -146,7 +68,7 @@ function Portfolio() {
             <div className="p-6">
 
             <h3 className="text-[24px] font-bold text-white">
-                MQ Portfolio
+                MQ Portfolio 2
             </h3>
 
             <p className="mt-4 text-[16px] leading-relaxed text-gray-300">
@@ -181,7 +103,7 @@ function Portfolio() {
             <div className="p-6">
 
             <h3 className="text-[24px] font-bold text-white">
-                MQ Portfolio
+                MQ Portfolio 3
             </h3>
 
             <p className="mt-4 text-[16px] leading-relaxed text-gray-300">
@@ -216,7 +138,7 @@ function Portfolio() {
             <div className="p-6">
 
             <h3 className="text-[24px] font-bold text-white">
-                MQ Portfolio
+                MQ Portfolio 4
             </h3>
 
             <p className="mt-4 text-[16px] leading-relaxed text-gray-300">
@@ -241,6 +163,27 @@ function Portfolio() {
 
         </div>
 
+        </div>
+
+        <div className="mt-16 flex justify-center">
+            <a
+                href="/portofolio"
+                className="
+                border-l-2
+                border-r-2
+                border-pink-400
+                px-8
+                py-2
+                text-[20px]
+                font-semibold
+                tracking-[4px]
+                text-pink-300
+                transition
+                hover:text-white
+                "
+            >
+                - More -
+            </a>
         </div>
 
     </section>

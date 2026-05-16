@@ -37,25 +37,19 @@ function AboutPage() {
           <div className="mt-14 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
             <div>
               <p className="text-[20px] leading-relaxed text-justify">
-                I am Maziya Ats Tsaqofi, an Informatics Engineering student
-                with a strong interest in frontend development, UI design, and
-                modern web technologies. I enjoy building web interfaces that
-                are responsive, accessible, and easy to use.
+                I am an Informatics Engineering student who enjoys exploring technology through frontend development, AI innovation, and digital product creation. I love building modern and interactive applications that combine functionality, problem-solving, and meaningful user experiences.
               </p>
 
               <p className="mt-8 text-[20px] leading-relaxed text-justify">
-                My learning journey has grown through academic projects,
-                competitions, and independent exploration. These experiences
-                helped me understand how design, code, communication, and
-                problem solving work together when creating a digital product.
+                Throughout my learning journey, I have explored various fields including web development, machine learning, databases, IoT, and software development. I actively participate in competitions, collaborative projects, and creative technology initiatives that continuously challenge me to grow both technically and creatively.
               </p>
 
               <p className="mt-8 text-[20px] leading-relaxed text-justify">
-                Currently, I am developing my portfolio while improving my
-                frontend skills with React and Tailwind CSS. I am also exploring
-                UI/UX design and AI-powered applications as part of my goal to
-                become a frontend developer who can build meaningful and useful
-                digital experiences.
+                Beyond coding, I also enjoy documenting my journey, sharing ideas, and creating digital content related to technology and personal experiences. For me, technology is not only about building systems, but also about creating impactful experiences and meaningful innovations for people.
+              </p>
+
+              <p className="mt-8 text-[20px] leading-relaxed text-justify">
+                Currently, I am actively developing personal projects, expanding my knowledge in frontend and AI technologies, and preparing myself for internship opportunities in the software engineering industry. My goal is to continue growing as a creative technologist who can build innovative digital solutions that are both functional and impactful.
               </p>
             </div>
 

@@ -2,7 +2,7 @@ import logo from "../assets/LogoIT.svg"
 
 function ITBerries() {
   return (
-    <section className="w-full h-[200px] bg-[#0D111A] overflow-hidden">
+    <section className="w-full h-[180px] bg-[#0D111A] overflow-hidden">
 
       <div className="h-full px-10 lg:px-28 py-8 flex items-start justify-between">
 
@@ -14,15 +14,15 @@ function ITBerries() {
           </h2>
 
           <p className="mt-4 max-w-6xl text-[14px] leading-relaxed text-[#F9F9F9]">
-            lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc. Donec auctor, nisl eget ultricies lacinia, nunc nisl aliquam nisl, eget aliquam nunc nisl eget nunc.
+            I explore technology through frontend development, creative design, and AI innovation. From web applications to digital products and tech competitions, I love creating experiences that are both functional and impactful.
           </p>
 
-          <a
+          {/* <a
             href="#about"
             className="mt-4 inline-block border-l-2 border-r-2 border-white px-4 py-1 text-[12px] font-medium tracking-widest text-white transition hover:text-pink-400"
           >
             READ MORE
-          </a>
+          </a> */}
 
         </div>
 

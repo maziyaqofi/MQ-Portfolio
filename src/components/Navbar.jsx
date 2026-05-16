@@ -4,10 +4,10 @@ import "./Navbar.css"
 const menuItems = [
   { label: "Home", href: "/" },
   { label: "About me", href: "/about-me" },
-  { label: "Skills", href: "/#skills" },
+  // { label: "Skills", href: "/#skills" },
   { label: "Portofolio", href: "/portofolio" },
-  { label: "Certificate", href: "/#certificate" },
-  { label: "Dokumentasi", href: "/#dokumentasi" },
+  { label: "Certificate", href: "/certificate" },
+  { label: "Dokumentasi", href: "/dokumentasi" },
 ]
 
 function Navbar() {
@@ -38,7 +38,7 @@ function Navbar() {
       </ul>
 
       <div className="navbar__actions">
-        <a href="#contact" className="navbar__contact">
+        <a href="/#contact" className="navbar__contact">
           CONTACT ME
         </a>
 

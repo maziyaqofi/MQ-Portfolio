@@ -10,6 +10,10 @@ import pythonLogo from "../assets/python.svg"
 import figmaLogo from "../assets/figma.svg"
 import gitLogo from "../assets/git.svg"
 import githubLogo from "../assets/github.svg"
+import viteLogo from "../assets/vite.svg"
+import TypeScriptLogo from "../assets/typescript.svg"
+import NextjsLogo from "../assets/nextjs.svg"
+import TensorflowLogo from "../assets/tensorflow-original.svg"
 
 import {
   FaPencilRuler,
@@ -53,45 +57,38 @@ function AboutSkills() {
     <div className="mx-auto mt-16 max-w-5xl">
 
         <p className="text-[20px] leading-relaxed text-justify text-[#1B1B1B]">
-        I am an Informatics Engineering student with a strong interest in
+        I am an Informatics Engineering student with a strong interest and who enjoys exploring technology through in
         <span className="font-semibold">
-            {" "}Frontend Development and modern web technologies.
+            {" "}Frontend Development, AI innovation, and digital product creation.
         </span>
 
-        {" "}I enjoy building responsive, interactive, and user-friendly
-        web applications that combine clean design with functional user
-        experiences. I have worked on several academic and competition
-        projects that helped me improve my skills. Through these experiences,
-        I learned how to turn ideas into real digital products while
-        continuously improving my problem-solving and teamwork abilities.
+        {" "}I love building modern and interactive applications that combine functionality, problem-solving, and meaningful user experiences.
         </p>
 
         <p className="mt-8 text-[20px] leading-relaxed text-justify text-[#1B1B1B]">
 
-        I am
+        Throughout my learning journey, I have explored various fields including
         <span className="font-semibold text-pink-500">
-            {" "}passionate about learning new technologies,
+            {" "}web development, machine learning, databases, IoT, and software development.
         </span>
 
-        especially in
+        {/* especially in
         <span className="font-semibold text-pink-500">
             {" "}web development and AI-powered applications.
-        </span>
+        </span> */}
 
-        {" "}My goal is to grow as a frontend developer and contribute to
-        creating impactful digital experiences that are both modern and
-        accessible.
-
+        {" "}I actively participate in competitions, collaborative projects, and creative technology initiatives that continuously challenge me to grow both technically and creatively.
+{/* 
         {" "}Currently, I am actively developing my portfolio, exploring
         modern UI/UX design, and preparing for internship opportunities in
-        the software engineering industry.
+        the software engineering industry. */}
 
         </p>
 
     </div>
 
     {/* SERVICES */}
-    <div className="mt-32">
+    <div className="mt-26">
 
     {/* TOP ROW */}
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 max-w-5xl mx-auto">
@@ -104,12 +101,11 @@ function AboutSkills() {
         <div>
 
             <h3 className="text-[24px] font-bold tracking-[4px] text-black">
-            DESIGN
+            Frontend Development
             </h3>
 
             <p className="mt-6 max-w-md text-[20px] leading-relaxed text-[#1B1B1B]">
-            I can design the site based on your needs and suggestions.
-            I can also design the site from scratch and consult you during the job.
+            I build responsive and interactive web applications using modern frontend technologies. I focus on creating clean interfaces, smooth user experiences, and functional digital products.
             </p>
 
         </div>
@@ -124,12 +120,11 @@ function AboutSkills() {
         <div>
 
             <h3 className="text-[24px] font-bold tracking-[4px] text-black">
-            DEVELOPMENT
+            Software & AI Exploration
             </h3>
 
             <p className="mt-6 max-w-md text-[20px] leading-relaxed text-[#1B1B1B]">
-            I can design the site based on your needs and suggestions.
-            I can also design the site from scratch and consult you during the job.
+            I enjoy exploring software development, AI technology, and problem-solving through projects, competitions, and continuous learning experiences.
             </p>
 
         </div>
@@ -148,12 +143,11 @@ function AboutSkills() {
         <div>
 
             <h3 className="text-[24px] font-bold tracking-[4px] text-black">
-            MAINTENANCE
+            Creative Technology
             </h3>
 
             <p className="mt-6 max-w-md text-[20px] leading-relaxed text-[#1B1B1B]">
-            I can design the site based on your needs and suggestions.
-            I can also design the site from scratch and consult you during the job.
+            I love combining creativity and technology to create impactful digital experiences, from web platforms and applications to innovative tech-based ideas.
             </p>
 
         </div>
@@ -165,7 +159,7 @@ function AboutSkills() {
     </div>
 
     {/* READ MORE */}
-    <div className="mt-28 flex justify-center">
+    <div className="mt-20 flex justify-center">
 
     <a
         href="/about-me"
@@ -189,7 +183,7 @@ function AboutSkills() {
     </div>
 
     {/* SKILLS */}
-    <div id="skills" className="mt-40">
+    <div id="skills" className="mt-25">
 
     {/* TITLE */}
     <div className="flex justify-center">
@@ -275,6 +269,18 @@ function AboutSkills() {
         </h4>
         </div>
 
+        <div className="flex flex-col items-center">
+        <img
+            src={viteLogo}
+            alt="Vite"
+            className="w-20 h-20 object-contain"
+        />
+
+        <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
+            Vite
+        </h4>
+        </div>
+
         </div>
 
         {/* LEARNING */}
@@ -342,68 +348,52 @@ function AboutSkills() {
 
             </div>
 
-        </div>
-
-        </div>
-
-        {/* OTHER SKILLS */}
-        <div className="mt-28">
-
-        <h3 className="text-[24px] font-bold tracking-[4px] text-[#1B1B1B]">
-            OTHER SKILLS:
-        </h3>
-
-        {/* GRID */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-16">
-
-            {/* GIT */}
+            {/* TypeScript */}
             <div className="flex flex-col items-center">
             <img
-            src={gitLogo}
-            alt="HTML"
+            src={TypeScriptLogo}
+            alt="TypeScript"
             className="w-20 h-20 object-contain"
             />
 
             <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
-                GIT
+                TypeScript
             </h4>
 
             </div>
 
-            {/* GITHUB */}
+            {/* Nextjs */}
             <div className="flex flex-col items-center">
-
             <img
-            src={githubLogo}
-            alt="HTML"
+            src={NextjsLogo}
+            alt="Nextjs"
             className="w-20 h-20 object-contain"
             />
 
             <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
-                GITHUB
+                Nextjs
             </h4>
 
             </div>
 
-            {/* FIGMA */}
+            {/* TensorFlow */}
             <div className="flex flex-col items-center">
-
             <img
-            src={figmaLogo}
-            alt="HTML"
+            src={TensorflowLogo}
+            alt="TensorFlow"
             className="w-20 h-20 object-contain"
             />
 
             <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
-                FIGMA
+                TensorFlow
             </h4>
 
             </div>
 
-
         </div>
 
         </div>
+
     </div>
 
     </div>
