@@ -1,3 +1,8 @@
+import LungoIMG from "../assets/lungo.svg";
+import RosokanIMG from "../assets/rosokan.svg";
+import GunungkuIMG from "../assets/gunungku.svg";
+import BipolarIMG from "../assets/bipolar.svg";
+
 function Portfolio() {
     return (
     <section
@@ -27,13 +32,21 @@ function Portfolio() {
         <div className="overflow-hidden rounded-2xl bg-[#161B22]">
 
             {/* IMAGE */}
-            <div className="h-[220px] bg-gray-700"></div>
+            <div className="h-[220px] overflow-hidden">
+
+            <img
+                src={LungoIMG}
+                alt="Lung'O App"
+                className="h-full w-full object-cover"
+            />
+
+            </div>
 
             {/* CONTENT */}
             <div className="p-6">
 
             <h3 className="text-[24px] font-bold text-white">
-                MQ Portfolio 1
+                Lung'O - Traveling App
             </h3>
 
             <p className="mt-4 text-[16px] leading-relaxed text-gray-300">
@@ -62,13 +75,22 @@ function Portfolio() {
         <div className="overflow-hidden rounded-2xl bg-[#161B22]">
 
             {/* IMAGE */}
-            <div className="h-[220px] bg-gray-700"></div>
+            <div className="h-[220px] overflow-hidden">
+
+            <img
+                src={
+                    RosokanIMG}
+                alt="Rosokan app"
+                className="h-full w-full object-cover"
+            />
+
+            </div>
 
             {/* CONTENT */}
             <div className="p-6">
 
             <h3 className="text-[24px] font-bold text-white">
-                MQ Portfolio 2
+                Rosokan - Green Commerce
             </h3>
 
             <p className="mt-4 text-[16px] leading-relaxed text-gray-300">
@@ -97,13 +119,21 @@ function Portfolio() {
         <div className="overflow-hidden rounded-2xl bg-[#161B22]">
 
             {/* IMAGE */}
-            <div className="h-[220px] bg-gray-700"></div>
+            <div className="h-[220px] overflow-hidden">
+
+            <img
+                src={BipolarIMG}
+                alt="Bipolar Detection app"
+                className="h-full w-full object-cover"
+            />
+
+            </div>
 
             {/* CONTENT */}
             <div className="p-6">
 
             <h3 className="text-[24px] font-bold text-white">
-                MQ Portfolio 3
+                Bipolar Detection - Teks Analysis ML
             </h3>
 
             <p className="mt-4 text-[16px] leading-relaxed text-gray-300">
@@ -132,13 +162,21 @@ function Portfolio() {
         <div className="overflow-hidden rounded-2xl bg-[#161B22]">
 
             {/* IMAGE */}
-            <div className="h-[220px] bg-gray-700"></div>
+            <div className="h-[220px] overflow-hidden">
+
+            <img
+                src={GunungkuIMG}
+                alt="Gunungku app"
+                className="h-full w-full object-cover"
+            />
+
+            </div>
 
             {/* CONTENT */}
             <div className="p-6">
 
             <h3 className="text-[24px] font-bold text-white">
-                MQ Portfolio 4
+                Gunungku - Booking Tikcket App
             </h3>
 
             <p className="mt-4 text-[16px] leading-relaxed text-gray-300">

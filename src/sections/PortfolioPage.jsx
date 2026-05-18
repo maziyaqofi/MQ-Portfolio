@@ -1,41 +1,42 @@
+import gunungkuImage from "../assets/gunungku.svg"
+import lungoImage from "../assets/lungo.svg"
+import bipolarImage from "../assets/bipolar.svg"
+import rosokanImage from "../assets/rosokan.svg"
+
 const projects = [
   {
-    title: "MQ Portfolio",
+    title: "Gunungku",
     category: "Frontend",
+    image: gunungkuImage,
     description:
-      "Personal portfolio website built with React, Vite, and Tailwind CSS. The project focuses on responsive layout, visual identity, and clean section-based composition.",
-    details:
-      "This portfolio presents profile, skills, selected projects, and contact information in a polished single-page experience with additional detail pages.",
+      "A project interface designed to present mountain tourism information with a clean and accessible visual experience.",
     tech: ["React", "Vite", "Tailwind CSS"],
     status: "In Progress",
   },
   {
-    title: "UI Portfolio Concept",
+    title: "Lungo",
     category: "UI/UX",
+    image: lungoImage,
     description:
-      "Interface exploration for a personal branding website with strong visual hierarchy, readable spacing, and mobile-first layout decisions.",
-    details:
-      "The design process includes layout planning, color system exploration, typography balancing, and responsive behavior refinement.",
+      "A UI exploration focused on product presentation, layout balance, and a modern visual system.",
     tech: ["Figma", "UI Design", "Responsive Design"],
     status: "Concept",
   },
   {
-    title: "Academic Web Project",
+    title: "Bipolar",
     category: "Frontend",
+    image: bipolarImage,
     description:
-      "A web development project created for academic practice, focused on translating requirements into functional and organized web pages.",
-    details:
-      "The project helped strengthen practical skills in component structure, styling consistency, and user-facing content organization.",
+      "A web project concept built to organize information with readable sections and responsive interface structure.",
     tech: ["HTML", "CSS", "JavaScript"],
     status: "Completed",
   },
   {
-    title: "Machine Learning Exploration",
+    title: "Rosokan",
     category: "Machine Learning",
+    image: rosokanImage,
     description:
-      "Learning project focused on understanding basic machine learning workflow, dataset preparation, and model experimentation.",
-    details:
-      "This exploration supports a broader interest in combining frontend interfaces with AI-powered application ideas.",
+      "A project exploration that combines digital product thinking with technology-based problem solving.",
     tech: ["Python", "Data Processing", "Model Training"],
     status: "Learning",
   },
@@ -62,34 +63,39 @@ function PortfolioPage() {
             </p>
           </div>
 
-          <div className="mt-20 grid gap-8">
+          <div className="mt-20 grid grid-cols-1 gap-10 md:grid-cols-2">
             {projects.map((project) => (
-              <article
+              <a
                 key={project.title}
-                className="grid gap-8 bg-[#161B22] p-8 md:grid-cols-[260px_1fr]"
+                href={project.image}
+                target="_blank"
+                rel="noreferrer"
+                className="group overflow-hidden rounded-2xl bg-[#161B22] transition hover:-translate-y-2 hover:bg-[#1d2430]"
               >
-                <div className="flex min-h-[180px] items-center justify-center bg-[#222936] text-center">
-                  <div>
-                    <p className="text-[14px] font-semibold uppercase tracking-[4px] text-pink-400">
+                <div className="relative h-[260px] overflow-hidden bg-[#222936]">
+                  <img
+                    src={project.image}
+                    alt={`${project.title} portfolio preview`}
+                    className="h-full w-full object-cover transition duration-300 group-hover:scale-95 group-hover:object-contain"
+                  />
+
+                  <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-[#0D111A]/85 px-5 py-3">
+                    <span className="text-[12px] font-semibold uppercase tracking-[3px] text-pink-300">
                       {project.category}
-                    </p>
-                    <p className="mt-3 text-[18px] font-bold text-[#F5D3DC]">
+                    </span>
+                    <span className="text-[12px] font-semibold text-[#F5D3DC]">
                       {project.status}
-                    </p>
+                    </span>
                   </div>
                 </div>
 
-                <div>
-                  <h2 className="text-[28px] font-bold text-white">
+                <div className="p-6">
+                  <h2 className="text-[24px] font-bold text-white">
                     {project.title}
                   </h2>
 
-                  <p className="mt-4 text-[18px] leading-relaxed text-gray-300">
+                  <p className="mt-4 text-[16px] leading-relaxed text-gray-300">
                     {project.description}
-                  </p>
-
-                  <p className="mt-4 text-[16px] leading-relaxed text-gray-400">
-                    {project.details}
                   </p>
 
                   <div className="mt-6 flex flex-wrap gap-3">
@@ -103,7 +109,7 @@ function PortfolioPage() {
                     ))}
                   </div>
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </div>
