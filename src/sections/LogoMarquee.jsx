@@ -1,5 +1,7 @@
 import udinusLogo from "../assets/Udinuslogo.png"
 import samsungLogo from "../assets/samsung.svg"
+import kitakerjaLogo from "../assets/kitakerja.png"
+import dusanLogo from "../assets/dusan.png"
 
 function LogoMarquee() {
   return (
@@ -24,8 +26,18 @@ function LogoMarquee() {
             className="h-10 object-contain"
             />
 
-            <h3>NARASI</h3>
-            <h3>NGI</h3>
+            <img 
+            src={kitakerjaLogo}
+            alt="Kita Kerja"
+            className="h-15 object-contain"
+            />
+
+            <img 
+            src={dusanLogo}
+            alt="Duta Santri"
+            className="h-15 object-contain"
+            />
+            
             <h3>GUNUNGKU</h3>
 
         </div>
@@ -45,8 +57,18 @@ function LogoMarquee() {
             className="h-10 object-contain"
             />
 
-            <h3>NARASI</h3>
-            <h3>NGI</h3>
+            <img 
+            src={kitakerjaLogo}
+            alt="Kita Kerja"
+            className="h-15 object-contain"
+            />
+
+            <img 
+            src={dusanLogo}
+            alt="Duta Santri"
+            className="h-15 object-contain"
+            />
+
             <h3>GUNUNGKU</h3>
 
         </div>

@@ -7,7 +7,7 @@ const menuItems = [
   // { label: "Skills", href: "/#skills" },
   { label: "Portofolio", href: "/portofolio" },
   { label: "Certificate", href: "/certificate" },
-  { label: "Dokumentasi", href: "/dokumentasi" },
+  { label: "Documentation", href: "/documentation" },
 ]
 
 function Navbar() {
@@ -38,7 +38,7 @@ function Navbar() {
       </ul>
 
       <div className="navbar__actions">
-        <a href="/#contact" className="navbar__contact">
+        <a href="/contact" className="navbar__contact">
           CONTACT ME
         </a>
 

@@ -16,7 +16,8 @@ function App() {
   const isAboutPage = currentPath === "/about-me"
   const isPortfolioPage = currentPath === "/portofolio"
   const isCertificatePage = currentPath === "/certificate"
-  const isDocumentationPage = currentPath === "/dokumentasi"
+  const isDocumentationPage = currentPath === "/documentation"
+  const isContactPage = currentPath === "/contact"
 
   if (isAboutPage) {
     return (
@@ -53,6 +54,16 @@ function App() {
       <div>
         <Navbar />
         <DocumentationPage />
+        <Footer />
+      </div>
+    )
+  }
+
+  if (isContactPage) {
+    return (
+      <div>
+        <Navbar />
+        <Contact />
         <Footer />
       </div>
     )

@@ -71,7 +71,7 @@ function AboutPage() {
                 <div className="mt-8 space-y-6 text-[18px] leading-relaxed">
                   <p>
                     <span className="font-semibold text-pink-400">Role:</span>{" "}
-                    Front-end Developer / UI Designer
+                    Frontend Developer & AI Tech Enthusiast
                   </p>
                   <p>
                     <span className="font-semibold text-pink-400">Focus:</span>{" "}
@@ -79,7 +79,7 @@ function AboutPage() {
                   </p>
                   <p>
                     <span className="font-semibold text-pink-400">Goal:</span>{" "}
-                    Preparing for internship opportunities in software engineering
+                    Preparing for internship, exchange, resource opportunities global in tech enthuiasts.                 
                   </p>
                 </div>
               </div>

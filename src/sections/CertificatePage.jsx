@@ -1,35 +1,76 @@
+import certificateKIM from "../assets/certificate-KIM.png"
+import certificateDicoding from "../assets/certificate-dicoding.png"
+import certificateHmdti from "../assets/certificate-hmdti.png"
+import certificateYPI from "../assets/certificate-YPI.png"
+import certificateWMK1 from "../assets/certificate-WMK1.png"
+import certificateKitakerja from "../assets/certificate-kitakerja.png"
+import certificateSIC from "../assets/certificate-SIC.png"
+import certificateWMK2 from "../assets/certificate-WMK2.png"
+
 const certificates = [
   {
-    title: "Frontend Development Course",
+    title: "KIM Certificate",
     type: "Course",
-    organizer: "Online Learning Platform",
     year: "2026",
+    image: certificateKIM,
     description:
-      "Completed a learning program focused on HTML, CSS, JavaScript, responsive layout, and frontend development fundamentals.",
+      "Certificate from a learning or activity program that supports my growth in technology, collaboration, and digital skills.",
   },
   {
-    title: "UI/UX Design Workshop",
+    title: "Dicoding Certificate",
+    type: "Course",
+    year: "2026",
+    image: certificateDicoding,
+    description:
+      "Certificate from an online learning program focused on technology, programming fundamentals, and software development skills.",
+  },
+  {
+    title: "HMDTI Certificate",
     type: "Activity",
-    organizer: "Campus / Community Event",
     year: "2026",
+    image: certificateHmdti,
     description:
-      "Participated in a design workshop covering user flow, wireframing, visual hierarchy, and interface presentation.",
+      "Certificate from a campus or organization activity related to informatics, teamwork, and student development.",
   },
   {
-    title: "Web Development Competition",
+    title: "YPI Certificate",
     type: "Competition",
-    organizer: "Technology Competition",
     year: "2026",
+    image: certificateYPI,
     description:
-      "Joined a web development competition and practiced building project ideas under requirements, time limits, and team collaboration.",
+      "Certificate from a competition or program experience that helped develop creativity, discipline, and problem-solving.",
   },
   {
-    title: "Technology Seminar",
+    title: "WMK Certificate 1",
     type: "Activity",
-    organizer: "Informatics Event",
-    year: "2025",
+    year: "2026",
+    image: certificateWMK1,
     description:
-      "Attended a technology seminar to broaden knowledge about software development, digital products, and current technology trends.",
+      "Certificate from an entrepreneurship or project-based activity involving ideation, teamwork, and product development.",
+  },
+  {
+    title: "Kita Kerja Certificate",
+    type: "Course",
+    year: "2026",
+    image: certificateKitakerja,
+    description:
+      "Certificate from a career or skills development program supporting readiness for professional opportunities.",
+  },
+  {
+    title: "SIC Certificate",
+    type: "Course",
+    year: "2026",
+    image: certificateSIC,
+    description:
+      "Certificate from a technology learning program that expands knowledge in software, innovation, and digital development.",
+  },
+  {
+    title: "WMK Certificate 2",
+    type: "Activity",
+    year: "2026",
+    image: certificateWMK2,
+    description:
+      "Additional certificate from WMK activities documenting participation, learning progress, and project experience.",
   },
 ]
 
@@ -77,11 +118,18 @@ function CertificatePage() {
                   {certificate.organizer}
                 </p>
 
-                <div className="mt-6 flex h-[180px] items-center justify-center bg-[#F5D3DC] text-center">
-                  <p className="px-8 text-[14px] font-semibold uppercase tracking-[3px] text-[#0D111A]/60">
-                    Certificate Preview
-                  </p>
-                </div>
+                <a
+                  href={certificate.image}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 flex h-[220px] items-center justify-center overflow-hidden bg-[#F5D3DC]"
+                >
+                  <img
+                    src={certificate.image}
+                    alt={`${certificate.title} preview`}
+                    className="h-full w-full object-contain transition duration-300 hover:scale-105"
+                  />
+                </a>
 
                 <p className="mt-6 text-[16px] leading-relaxed text-[#333333]">
                   {certificate.description}

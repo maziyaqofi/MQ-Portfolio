@@ -1,35 +1,39 @@
-const documentations = [
+import { FaExternalLinkAlt, FaTiktok, FaYoutube } from "react-icons/fa"
+
+const documentationImages = Object.entries(
+  import.meta.glob("../assets/Documentation*.{jpeg,jpg,png,webp}", {
+    eager: true,
+    import: "default",
+    query: "?url",
+  })
+)
+  .map(([path, src]) => {
+    const number = Number(path.match(/Documentation(\d+)/)?.[1] ?? 0)
+
+    return {
+      number,
+      src,
+      title: `Documentation ${number}`,
+    }
+  })
+  .sort((a, b) => a.number - b.number)
+
+const videoLinks = [
   {
-    title: "Portfolio Website Development",
-    category: "Project Process",
-    date: "2026",
+    title: "YouTube Documentation",
+    platform: "YouTube",
+    href: "https://www.youtube.com/@maziyadoc/videos",
+    icon: <FaYoutube />,
     description:
-      "Documentation of the process of building a personal portfolio, including layout planning, responsive design decisions, and section refinement.",
-    notes: ["Design exploration", "React component structure", "Responsive testing"],
+      "Video documentation, project stories, and activity records from my YouTube channel.",
   },
   {
-    title: "Team Project Discussion",
-    category: "Team Activity",
-    date: "2026",
+    title: "TikTok Short Documentation",
+    platform: "TikTok",
+    href: "https://www.tiktok.com/@maziyadoc",
+    icon: <FaTiktok />,
     description:
-      "A record of collaborative project discussions with team members, covering idea development, task division, and interface planning.",
-    notes: ["Brainstorming", "Task planning", "Progress review"],
-  },
-  {
-    title: "UI Design Iteration",
-    category: "Design Process",
-    date: "2026",
-    description:
-      "Documentation of UI improvements from early design to a cleaner visual system, including typography, color, spacing, and layout revisions.",
-    notes: ["Wireframe", "Visual hierarchy", "Design feedback"],
-  },
-  {
-    title: "Academic Project Build",
-    category: "Project Documentation",
-    date: "2025",
-    description:
-      "Documentation of an academic project workflow from requirements and implementation to final presentation and project reflection.",
-    notes: ["Requirement analysis", "Implementation", "Presentation"],
+      "Short-form documentation and behind-the-scenes project moments from my TikTok account.",
   },
 ]
 
@@ -46,59 +50,57 @@ function DocumentationPage() {
             </div>
           </div>
 
-          <p className="mx-auto mt-10 max-w-4xl text-center text-[18px] leading-relaxed text-[#F5D3DC]">
-            Documentation of team activities, project development processes,
-            design exploration, discussions, and progress behind the projects I
-            work on.
-          </p>
-
-          <div className="mt-16 grid gap-8">
-            {documentations.map((item, index) => (
-              <article
-                key={item.title}
-                className="grid gap-8 bg-[#161B22] p-8 lg:grid-cols-[320px_1fr]"
+          <div className="mt-16 grid gap-6 md:grid-cols-2">
+            {videoLinks.map((video) => (
+              <a
+                key={video.platform}
+                href={video.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group rounded-3xl bg-[#161B22] p-8 transition hover:-translate-y-1 hover:bg-[#1d2430]"
               >
-                <div className="flex min-h-[220px] items-center justify-center bg-[#222936]">
-                  <div className="text-center">
-                    <p className="text-[48px] font-bold text-pink-400">
-                      {String(index + 1).padStart(2, "0")}
-                    </p>
-                    <p className="mt-3 text-[14px] font-semibold uppercase tracking-[4px] text-[#F5D3DC]">
-                      Documentation Photo
-                    </p>
+                <div className="flex items-center justify-between gap-6">
+                  <div className="flex items-center gap-4">
+                    <span className="text-[34px] text-pink-400">
+                      {video.icon}
+                    </span>
+                    <div>
+                      <p className="text-[13px] font-bold uppercase tracking-[4px] text-pink-300">
+                        {video.platform}
+                      </p>
+                      <h2 className="mt-2 text-[22px] font-bold">
+                        {video.title}
+                      </h2>
+                    </div>
                   </div>
+
+                  <FaExternalLinkAlt className="text-pink-300 transition group-hover:text-white" />
                 </div>
 
-                <div>
-                  <div className="flex flex-wrap items-center gap-4">
-                    <span className="bg-pink-400/20 px-4 py-1 text-[14px] font-semibold text-pink-300">
-                      {item.category}
-                    </span>
-                    <span className="text-[14px] font-semibold tracking-[2px] text-gray-400">
-                      {item.date}
-                    </span>
-                  </div>
+                <p className="mt-6 text-[16px] leading-relaxed text-gray-300">
+                  {video.description}
+                </p>
+              </a>
+            ))}
+          </div>
 
-                  <h2 className="mt-5 text-[28px] font-bold">
-                    {item.title}
-                  </h2>
-
-                  <p className="mt-4 text-[17px] leading-relaxed text-gray-300">
-                    {item.description}
-                  </p>
-
-                  <div className="mt-6 flex flex-wrap gap-3">
-                    {item.notes.map((note) => (
-                      <span
-                        key={note}
-                        className="rounded-full border border-pink-400/40 px-4 py-1 text-[14px] text-[#F5D3DC]"
-                      >
-                        {note}
-                      </span>
-                    ))}
-                  </div>
+          <div className="mt-20 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {documentationImages.map((image) => (
+              <a
+                key={image.title}
+                href={image.src}
+                target="_blank"
+                rel="noreferrer"
+                className="group overflow-hidden rounded-3xl bg-[#161B22]"
+              >
+                <div className="aspect-[4/3] overflow-hidden rounded-3xl bg-[#222936]">
+                  <img
+                    src={image.src}
+                    alt={image.title}
+                    className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                  />
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </div>
