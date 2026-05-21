@@ -2,18 +2,18 @@ import logo from "../assets/LogoIT.svg"
 
 function ITBerries() {
   return (
-    <section className="w-full h-[180px] bg-[#0D111A] overflow-hidden">
+    <section className="w-full bg-[#0D111A] overflow-hidden lg:h-[180px]">
 
-      <div className="h-full px-10 lg:px-28 py-8 flex items-start justify-between">
+      <div className="relative h-full px-8 py-8 lg:px-28 flex items-start justify-between">
 
         {/* LEFT CONTENT */}
         <div className="w-full">
 
-          <h2 className="text-[24px] font-semibold tracking-[6px] text-[#F9F9F9]">
+          <h2 className="text-[20px] lg:text-[24px] font-semibold tracking-[5px] lg:tracking-[6px] text-[#F9F9F9]">
             IT BERRIES
           </h2>
 
-          <p className="mt-4 max-w-6xl text-[14px] leading-relaxed text-[#F9F9F9]">
+          <p className="mt-4 max-w-6xl text-[13px] lg:text-[14px] leading-relaxed text-[#F9F9F9]">
             I explore technology through frontend development, creative design, and AI innovation. From web applications to digital products and tech competitions, I love creating experiences that are both functional and impactful.
           </p>
 
@@ -27,7 +27,7 @@ function ITBerries() {
         </div>
 
         {/* RIGHT LOGO */}
-        <div className="relative flex justify-end">
+        <div className="hidden md:flex relative justify-end">
 
         <img
             src={logo}

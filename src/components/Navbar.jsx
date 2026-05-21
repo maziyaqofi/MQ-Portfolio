@@ -1,4 +1,5 @@
-import { HiMenuAlt3 } from "react-icons/hi"
+import { useState } from "react"
+import { HiMenuAlt3, HiX } from "react-icons/hi"
 import "./Navbar.css"
 
 const menuItems = [
@@ -11,6 +12,7 @@ const menuItems = [
 ]
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const currentPath = window.location.pathname
 
   return (
@@ -55,10 +57,33 @@ function Navbar() {
 
       <button
         className="navbar__toggle"
-        aria-label="Open navigation menu"
+        type="button"
+        aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-expanded={isMenuOpen}
+        onClick={() => setIsMenuOpen((open) => !open)}
       >
-        <HiMenuAlt3 />
+        {isMenuOpen ? <HiX /> : <HiMenuAlt3 />}
       </button>
+
+      <div className={isMenuOpen ? "navbar__mobile-menu navbar__mobile-menu--open" : "navbar__mobile-menu"}>
+        {menuItems.map((item) => (
+          <a
+            key={item.label}
+            href={item.href}
+            className={
+              currentPath === item.href
+                ? "navbar__mobile-link navbar__mobile-link--active"
+                : "navbar__mobile-link"
+            }
+          >
+            {item.label}
+          </a>
+        ))}
+
+        <a href="/contact" className="navbar__mobile-contact">
+          CONTACT ME
+        </a>
+      </div>
     </nav>
   )
 }
