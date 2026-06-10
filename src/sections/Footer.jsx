@@ -14,7 +14,7 @@ function Footer() {
       <div className="flex justify-center">
 
         <a
-          href="#home"
+          href="/#home"
           className="
             flex
             flex-col
@@ -40,8 +40,10 @@ function Footer() {
       <div className="mt-12 flex justify-center gap-8">
 
         <a
-          href="https://github.com/"
+          href="https://github.com/maziyaqofi"
           target="_blank"
+          rel="noreferrer"
+          aria-label="Maziya on GitHub"
           className="
             text-[24px]
             text-white
@@ -53,8 +55,10 @@ function Footer() {
         </a>
 
         <a
-          href="https://linkedin.com/"
+          href="https://www.linkedin.com/in/maziyaqofi"
           target="_blank"
+          rel="noreferrer"
+          aria-label="Maziya on LinkedIn"
           className="
             text-[24px]
             text-white
@@ -66,8 +70,10 @@ function Footer() {
         </a>
 
         <a
-          href="https://instagram.com/"
+          href="https://instagram.com/maziyaqofi"
           target="_blank"
+          rel="noreferrer"
+          aria-label="Maziya on Instagram"
           className="
             text-[24px]
             text-white
@@ -84,7 +90,7 @@ function Footer() {
       <div className="mt-10 text-center">
 
         <p className="text-[16px] tracking-[2px] text-gray-400">
-          © 2026 MaziyaQofi. All Rights Reserved.
+          © 2026 MaziyaQofi. All Rights Reserved. | V.1.1.1
         </p>
 
       </div>

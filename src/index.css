@@ -17,17 +17,19 @@ body {
 }
 
 .marquee__content {
+  --marquee-gap: 3rem;
   display: flex;
-  gap: 6rem;
+  gap: var(--marquee-gap);
   width: max-content;
   animation: marquee 20s linear infinite;
+  will-change: transform;
 }
 
 .marquee__content h3 {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 700;
   color: white;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   white-space: nowrap;
 }
 
@@ -37,6 +39,12 @@ body {
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% - (var(--marquee-gap) / 2)));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__content {
+    animation-play-state: paused;
   }
 }

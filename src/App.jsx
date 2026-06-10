@@ -1,7 +1,6 @@
 import Navbar from "./components/Navbar"
 import Hero from "./sections/Hero"
 import ITBerries from "./sections/ITBerries"
-import AboutPage from "./sections/AboutPage"
 import AboutSkills from "./sections/AboutSkills"
 import LogoMarquee from "./sections/LogoMarquee"
 import Portfolio from "./sections/Portfolio"
@@ -11,61 +10,32 @@ import DocumentationPage from "./sections/DocumentationPage"
 import Contact from "./sections/Contact"
 import Footer from "./sections/Footer"
 
+const pageComponents = {
+  "/portofolio": PortfolioPage,
+  "/certificate": CertificatePage,
+  "/documentation": DocumentationPage,
+  "/contact": Contact,
+}
+
+function PageLayout({ children }) {
+  return (
+    <div id="top">
+      <Navbar />
+      {children}
+      <Footer />
+    </div>
+  )
+}
+
 function App() {
   const currentPath = window.location.pathname
-  const isAboutPage = currentPath === "/about-me"
-  const isPortfolioPage = currentPath === "/portofolio"
-  const isCertificatePage = currentPath === "/certificate"
-  const isDocumentationPage = currentPath === "/documentation"
-  const isContactPage = currentPath === "/contact"
+  const PageComponent = pageComponents[currentPath]
 
-  if (isAboutPage) {
+  if (PageComponent) {
     return (
-      <div>
-        <Navbar />
-        <AboutPage />
-        <Footer />
-      </div>
-    )
-  }
-
-  if (isPortfolioPage) {
-    return (
-      <div>
-        <Navbar />
-        <PortfolioPage />
-        <Footer />
-      </div>
-    )
-  }
-
-  if (isCertificatePage) {
-    return (
-      <div>
-        <Navbar />
-        <CertificatePage />
-        <Footer />
-      </div>
-    )
-  }
-
-  if (isDocumentationPage) {
-    return (
-      <div>
-        <Navbar />
-        <DocumentationPage />
-        <Footer />
-      </div>
-    )
-  }
-
-  if (isContactPage) {
-    return (
-      <div>
-        <Navbar />
-        <Contact />
-        <Footer />
-      </div>
+      <PageLayout>
+        <PageComponent />
+      </PageLayout>
     )
   }
 

@@ -2,49 +2,29 @@ import logo from "../assets/LogoIT.svg"
 
 function ITBerries() {
   return (
-    <section className="w-full bg-[#0D111A] overflow-hidden lg:h-[180px]">
-
-      <div className="relative h-full px-8 py-8 lg:px-28 flex items-start justify-between">
-
-        {/* LEFT CONTENT */}
+    <section className="w-full overflow-hidden bg-[#0D111A] lg:h-[180px]">
+      <div className="relative flex h-full items-start justify-between px-8 py-8 lg:px-28">
         <div className="w-full">
-
-          <h2 className="text-[20px] lg:text-[24px] font-semibold tracking-[5px] lg:tracking-[6px] text-[#F9F9F9]">
+          <h2 className="text-[20px] font-semibold tracking-[5px] text-[#F9F9F9] lg:text-[24px] lg:tracking-[6px]">
             IT BERRIES
           </h2>
-
-          <p className="mt-4 max-w-6xl text-[13px] lg:text-[14px] leading-relaxed text-[#F9F9F9]">
-            I explore technology through frontend development, creative design, and AI innovation. From web applications to digital products and tech competitions, I love creating experiences that are both functional and impactful.
+          <p className="mt-4 max-w-6xl text-[13px] leading-relaxed text-[#F9F9F9] lg:text-[14px]">
+            I explore technology through software engineering, AI innovation,
+            and creative digital solutions. From developing applications and
+            intelligent systems to participating in competitions and building
+            personal projects, I enjoy creating technology that is both
+            functional and impactful.
           </p>
-
-          {/* <a
-            href="#about"
-            className="mt-4 inline-block border-l-2 border-r-2 border-white px-4 py-1 text-[12px] font-medium tracking-widest text-white transition hover:text-pink-400"
-          >
-            READ MORE
-          </a> */}
-
         </div>
 
-        {/* RIGHT LOGO */}
-        <div className="hidden md:flex relative justify-end">
-
-        <img
+        <div className="relative hidden justify-end md:flex">
+          <img
             src={logo}
             alt="IT Logo"
-            className="
-            w-[450px]
-            opacity-20
-            rotate-12
-            translate-x-40
-            -translate-y-45
-            "
-        />
-
+            className="w-[450px] -translate-y-45 translate-x-40 rotate-12 opacity-20"
+          />
         </div>
-
       </div>
-
     </section>
   )
 }

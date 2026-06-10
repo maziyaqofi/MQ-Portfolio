@@ -1,15 +1,28 @@
 .navbar {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 30;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
   background: #ffffff;
-  padding: 2rem;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.navbar--hidden {
+  transform: translateY(-100%);
+}
+
+.navbar__inner {
+  display: flex;
+  width: 100%;
+  min-height: 5.5rem;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar__logo {
+  display: inline-flex;
   font-size: 1.5rem;
   font-weight: 800;
   line-height: 1;
@@ -40,8 +53,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 3rem;
-  padding: 0.85rem 1.5rem;
+  height: 2.75rem;
+  padding: 0 1.35rem;
   border-radius: 999px;
   background: #ec4899;
   color: #ffffff;
@@ -56,33 +69,6 @@
 .navbar__contact:hover {
   background: #db2777;
   transform: translateY(-2px);
-}
-
-.navbar__language {
-  display: flex;
-  overflow: hidden;
-  height: 3rem;
-  border: 4px solid #ec4899;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.navbar__language-button {
-  display: inline-flex;
-  align-items: center;
-  padding: 0 1.25rem;
-  color: #f9a8d4;
-  transition: color 160ms ease;
-}
-
-.navbar__language-button:hover {
-  color: black;
-}
-
-.navbar__language-button--active {
-  background: #ec4899;
-  color: #f9f9f9;
 }
 
 .navbar__toggle {
@@ -137,25 +123,26 @@
 }
 
 @media (min-width: 1024px) {
-  .navbar {
-    padding: 1.5rem 7rem;
+  .navbar__inner {
+    min-height: 5rem;
+    padding: 1rem 7rem;
   }
 
   .navbar__logo {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
   }
 
   .navbar__menu {
     display: flex;
     align-items: center;
-    gap: clamp(1.25rem, 2vw, 2rem);
-    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    gap: 2.25rem;
+    font-size: 0.9rem;
   }
 
   .navbar__actions {
     display: flex;
     align-items: center;
-    gap: clamp(1.25rem, 2vw, 2rem);
+    gap: 1rem;
   }
 
   .navbar__toggle {

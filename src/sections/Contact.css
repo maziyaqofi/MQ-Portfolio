@@ -1,0 +1,248 @@
+.contact-section {
+  width: 100%;
+  padding: 5rem 2.5rem;
+  background: radial-gradient(circle, #f9f9f9 0%, #f5d3dc 100%);
+  color: #17172e;
+}
+
+.contact-panel {
+  display: grid;
+  max-width: 76rem;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 20px 50px rgba(56, 28, 42, 0.08);
+}
+
+.contact-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.contact-eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.75rem;
+  border: 2px solid #eca2bd;
+  border-radius: 999px;
+  padding: 0.45rem 1rem 0.45rem 0.5rem;
+  color: #c73575;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.contact-eyebrow span,
+.contact-details__icon,
+.contact-form button span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+}
+
+.contact-eyebrow span {
+  width: 2.25rem;
+  height: 2.25rem;
+  background: #17172e;
+  color: white;
+}
+
+.contact-intro h2 {
+  margin-top: 2.5rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.contact-intro > p {
+  max-width: 34rem;
+  margin-top: 1.75rem;
+  color: #747474;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.contact-details {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.contact-details a,
+.contact-details > div {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 1rem;
+  color: #33333b;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-details a {
+  transition: color 180ms ease;
+}
+
+.contact-details a:hover {
+  color: #e32277;
+}
+
+.contact-details__icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  background: #17172e;
+  color: white;
+}
+
+.contact-form {
+  display: grid;
+  align-content: center;
+  gap: 1.35rem;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  padding: 3rem;
+  background: #fce7f3;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.contact-form label > span {
+  color: black;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  border: 1px solid #e32277;
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 0.85rem 1rem;
+  background: rgba(255, 255, 255, 0.21);
+  color: white;
+  font: inherit;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.contact-form textarea {
+  min-height: 6rem;
+  resize: vertical;
+}
+
+.contact-form select {
+  cursor: pointer;
+}
+
+.contact-form select option {
+  color: #17172e;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color: white;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.contact-form button {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.4rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.55rem 1.35rem 0.55rem 0.55rem;
+  background: white;
+  color: #17172e;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.contact-form button span {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #17172e;
+  color: white;
+}
+
+.contact-form button:hover {
+  color: #e32277;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 900px) {
+  .contact-panel {
+    grid-template-columns: minmax(0, 1fr) minmax(24rem, 0.9fr);
+  }
+}
+
+@media (max-width: 899px) {
+  .contact-section {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .contact-intro {
+    padding: 2.5rem 2rem 1rem;
+  }
+
+  .contact-form {
+    margin: 2rem;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .contact-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .contact-intro {
+    padding: 2rem 1.25rem 0.5rem;
+  }
+
+  .contact-intro h2 {
+    margin-top: 2rem;
+    font-size: 2.35rem;
+  }
+
+  .contact-intro h2 br {
+    display: none;
+  }
+
+  .contact-details a,
+  .contact-details > div {
+    width: 100%;
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-form {
+    gap: 1.15rem;
+    margin: 1.25rem;
+    padding: 1.5rem;
+  }
+}

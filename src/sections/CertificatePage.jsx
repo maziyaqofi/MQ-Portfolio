@@ -114,10 +114,6 @@ function CertificatePage() {
                   </span>
                 </div>
 
-                <p className="mt-4 text-[16px] font-semibold text-[#e32277]">
-                  {certificate.organizer}
-                </p>
-
                 <a
                   href={certificate.image}
                   target="_blank"

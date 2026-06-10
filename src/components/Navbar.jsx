@@ -1,69 +1,84 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { HiMenuAlt3, HiX } from "react-icons/hi"
 import "./Navbar.css"
 
 const menuItems = [
   { label: "Home", href: "/" },
-  { label: "About me", href: "/about-me" },
-  // { label: "Skills", href: "/#skills" },
-  { label: "Portofolio", href: "/portofolio" },
+  { label: "Project", href: "/portofolio" },
   { label: "Certificate", href: "/certificate" },
   { label: "Documentation", href: "/documentation" },
 ]
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isNavbarHidden, setIsNavbarHidden] = useState(false)
   const currentPath = window.location.pathname
 
+  useEffect(() => {
+    let previousScrollY = window.scrollY
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      const isAtTop = currentScrollY <= 20
+      const isAtBottom =
+        window.innerHeight + currentScrollY >= document.documentElement.scrollHeight - 20
+      const isScrollingDown = currentScrollY > previousScrollY
+
+      if (isAtTop || isAtBottom || !isScrollingDown) {
+        setIsNavbarHidden(false)
+      } else if (currentScrollY > 120 && !isMenuOpen) {
+        setIsNavbarHidden(true)
+      }
+
+      previousScrollY = currentScrollY
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true })
+
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [isMenuOpen])
+
   return (
-    <nav className="navbar">
-      <h1 className="navbar__logo">
-        <span className="text-pink-500">Maziya</span>
-        <span className="text-black">Qofi</span>
-      </h1>
-
-      <ul className="navbar__menu">
-        {menuItems.map((item) => (
-          <li key={item.label}>
-            <a
-              href={item.href}
-              className={
-                currentPath === item.href
-                  ? "navbar__link navbar__link--active"
-                  : "navbar__link"
-              }
-            >
-              {item.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-
-      <div className="navbar__actions">
-        <a href="/contact" className="navbar__contact">
-          CONTACT ME
+    <nav className={isNavbarHidden ? "navbar navbar--hidden" : "navbar"}>
+      <div className="navbar__inner">
+        <a href="/" className="navbar__logo" aria-label="Go to home page">
+          <span className="text-pink-500">Maziya</span>
+          <span className="text-black">Qofi</span>
         </a>
 
-        <div className="navbar__language">
-          <button className="navbar__language-button navbar__language-button--active">
-            IDN
-          </button>
+        <ul className="navbar__menu">
+          {menuItems.map((item) => (
+            <li key={item.label}>
+              <a
+                href={item.href}
+                className={
+                  currentPath === item.href
+                    ? "navbar__link navbar__link--active"
+                    : "navbar__link"
+                }
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
 
-          <button className="navbar__language-button">
-            ENG
-          </button>
+        <div className="navbar__actions">
+          <a href="/contact" className="navbar__contact">
+            CONTACT ME
+          </a>
         </div>
-      </div>
 
-      <button
-        className="navbar__toggle"
-        type="button"
-        aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-        aria-expanded={isMenuOpen}
-        onClick={() => setIsMenuOpen((open) => !open)}
-      >
-        {isMenuOpen ? <HiX /> : <HiMenuAlt3 />}
-      </button>
+        <button
+          className="navbar__toggle"
+          type="button"
+          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
+          {isMenuOpen ? <HiX /> : <HiMenuAlt3 />}
+        </button>
+      </div>
 
       <div className={isMenuOpen ? "navbar__mobile-menu navbar__mobile-menu--open" : "navbar__mobile-menu"}>
         {menuItems.map((item) => (

@@ -1,5 +1,6 @@
 import profile from "../assets/Maziyapic.png"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
+import { HiDownload } from "react-icons/hi"
 import { MdAlternateEmail } from "react-icons/md"
 import "./Hero.css"
 
@@ -38,6 +39,19 @@ function SocialLinks({ variant }) {
   )
 }
 
+function DownloadCV({ variant }) {
+  return (
+    <a
+      href="/CV-MaziyaQofi.pdf"
+      download="CV-MaziyaQofi.pdf"
+      className={`hero__download hero__download--${variant}`}
+    >
+      <HiDownload />
+      DOWNLOAD CV
+    </a>
+  )
+}
+
 function Hero() {
   return (
     <section className="hero">
@@ -45,7 +59,7 @@ function Hero() {
         <div className="hero__content">
           <div className="hero__copy">
             <p className="hero__eyebrow">
-              Hi, I am
+              Hi, I'm
             </p>
 
             <h1 className="hero__title">
@@ -53,11 +67,18 @@ function Hero() {
             </h1>
 
             <p className="hero__role">
-              Frontend Developer & AI Tech Enthusiast
+              Software Engineer & AI Tech Enthusiast
+            </p>
+
+            
+            <p className="hero__description">
+              I am an Informatics Engineering student and aspiring Software Engineer with a strong interest in AI innovation and digital product development. I enjoy building modern applications and exploring technologies that combine functionality, problem-solving, and meaningful user experiences.
             </p>
           </div>
 
+          <DownloadCV variant="desktop" />
           <SocialLinks variant="desktop" />
+          
         </div>
 
         <div className="hero__portrait-panel">
@@ -81,7 +102,7 @@ function Hero() {
         <div className="hero__mobile-card">
           <div className="hero__mobile-copy">
             <p className="hero__mobile-eyebrow">
-              Hi, I am
+              Hi, I'm
             </p>
 
             <h1 className="hero__mobile-title">
@@ -89,12 +110,13 @@ function Hero() {
             </h1>
 
             <p className="hero__mobile-role">
-              Frontend Developer & AI Tech Enthusiast
+              Software Engineer & AI Tech Enthusiast
             </p>
           </div>
         </div>
 
         <SocialLinks variant="mobile" />
+        <DownloadCV variant="mobile" />
       </div>
     </section>
   )

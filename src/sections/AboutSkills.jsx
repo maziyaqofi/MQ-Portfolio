@@ -1,405 +1,94 @@
-import htmlLogo from "../assets/html.svg"
-import cssLogo from "../assets/css.svg"
-import jsLogo from "../assets/javascript.svg"
-import reactLogo from "../assets/react.svg"
-import tailwindLogo from "../assets/tailwindcss.svg"
-import nodejsLogo from "../assets/nodejs.svg"
-import mysqlLogo from "../assets/mysql.svg"
-import mongodbLogo from "../assets/mongodb.svg"
-import pythonLogo from "../assets/python.svg"
-import viteLogo from "../assets/vite.svg"
-import TypeScriptLogo from "../assets/typescript.svg"
-import NextjsLogo from "../assets/nextjs.svg"
-import TensorflowLogo from "../assets/tensorflow-original.svg"
-
 import {
-  FaPencilRuler,
+  FaCode,
+  FaDatabase,
+  FaPalette,
+  FaServer,
   FaTools,
-  FaLaptopCode
 } from "react-icons/fa"
+import { HiOutlineAcademicCap } from "react-icons/hi"
+import "./AboutSkills.css"
+
+const skillGroups = [
+  {
+    title: "Frontend",
+    icon: <FaCode />,
+    tone: "purple",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Tailwind", "Vite"],
+  },
+  {
+    title: "Backend",
+    icon: <FaServer />,
+    tone: "green",
+    skills: ["Node.js", "REST API", "Express"],
+  },
+  {
+    title: "Database",
+    icon: <FaDatabase />,
+    tone: "blue",
+    skills: ["MySQL", "MongoDB"],
+  },
+  {
+    title: "Tools & DevOps",
+    icon: <FaTools />,
+    tone: "orange",
+    skills: ["Git", "GitHub", "VS Code", "Postman"],
+  },
+  {
+    title: "Design",
+    icon: <FaPalette />,
+    tone: "pink",
+    skills: ["Figma", "UI/UX", "Responsive Design"],
+  },
+  {
+    title: "Currently Learning",
+    icon: <HiOutlineAcademicCap />,
+    tone: "purple",
+    featured: true,
+    skills: ["TypeScript", "Next.js", "Python", "TensorFlow"],
+  },
+]
 
 function AboutSkills() {
   return (
-
-// About Section
     <section
-    id="about"
-    className="
-        w-full
-        min-h-screen
-        px-10
-        lg:px-28
-        py-24
-    "
-    style={{
-        background:
-        "radial-gradient(circle, #F9F9F9 0%, #F5D3DC 100%)",
-    }}
+      id="skills"
+      className="skills-section"
+      style={{
+        background: "radial-gradient(circle, #F9F9F9 0%, #F5D3DC 100%)",
+      }}
     >
+      <div className="skills-section__inner">
+        <header className="skills-section__header">
+          <p>WHAT I WORK WITH</p>
+          <h2>
+            Skills &amp; <span>Technologies</span>
+          </h2>
+        </header>
 
-    {/* TITLE */}
-    <div className="flex justify-center">
+        <div className="skills-grid">
+          {skillGroups.map((group) => (
+            <article
+              key={group.title}
+              className={`skill-card skill-card--${group.tone} ${
+                group.featured ? "skill-card--featured" : ""
+              }`}
+            >
+              <div className="skill-card__icon" aria-hidden="true">
+                {group.icon}
+              </div>
 
-        <div className="border-4 border-pink-500 px-10 py-3">
+              <h3>{group.title}</h3>
 
-        <h2 className="text-[28px] font-bold tracking-[6px] text-[#1B1B1B]">
-            ABOUT ME
-        </h2>
-
+              <div className="skill-card__pills">
+                {group.skills.map((skill) => (
+                  <span key={skill}>{skill}</span>
+                ))}
+              </div>
+            </article>
+          ))}
         </div>
-
-    </div>
-
-    {/* DESCRIPTION */}
-    <div className="mx-auto mt-16 max-w-5xl">
-
-        <p className="text-[20px] leading-relaxed text-justify text-[#1B1B1B]">
-        I am an Informatics Engineering student with a strong interest and who enjoys exploring technology through in
-        <span className="font-semibold">
-            {" "}Frontend Development, AI innovation, and digital product creation.
-        </span>
-
-        {" "}I love building modern and interactive applications that combine functionality, problem-solving, and meaningful user experiences.
-        </p>
-
-        <p className="mt-8 text-[20px] leading-relaxed text-justify text-[#1B1B1B]">
-
-        Throughout my learning journey, I have explored various fields including
-        <span className="font-semibold text-pink-500">
-            {" "}web development, machine learning, databases, IoT, and software development.
-        </span>
-
-        {/* especially in
-        <span className="font-semibold text-pink-500">
-            {" "}web development and AI-powered applications.
-        </span> */}
-
-        {" "}I actively participate in competitions, collaborative projects, and creative technology initiatives that continuously challenge me to grow both technically and creatively.
-{/* 
-        {" "}Currently, I am actively developing my portfolio, exploring
-        modern UI/UX design, and preparing for internship opportunities in
-        the software engineering industry. */}
-
-        </p>
-
-    </div>
-
-    {/* SERVICES */}
-    <div className="mt-26">
-
-    {/* TOP ROW */}
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 max-w-5xl mx-auto">
-
-        {/* DESIGN */}
-        <div className="flex gap-6">
-
-        <FaPencilRuler className="text-[40px] text-[#C7B8BE]" />
-
-        <div>
-
-            <h3 className="text-[24px] font-bold tracking-[4px] text-black">
-            Frontend Development
-            </h3>
-
-            <p className="mt-6 max-w-md text-[20px] leading-relaxed text-[#1B1B1B]">
-            I build responsive and interactive web applications using modern frontend technologies. I focus on creating clean interfaces, smooth user experiences, and functional digital products.
-            </p>
-
-        </div>
-
-        </div>
-
-        {/* DEVELOPMENT */}
-        <div className="flex gap-6">
-
-        <FaTools className="text-[40px] text-[#C7B8BE]" />
-
-        <div>
-
-            <h3 className="text-[24px] font-bold tracking-[4px] text-black">
-            Software & AI Exploration
-            </h3>
-
-            <p className="mt-6 max-w-md text-[20px] leading-relaxed text-[#1B1B1B]">
-            I enjoy exploring software development, AI technology, and problem-solving through projects, competitions, and continuous learning experiences.
-            </p>
-
-        </div>
-
-        </div>
-
-    </div>
-
-    {/* BOTTOM */}
-    <div className="mt-24 flex justify-center">
-
-        <div className="flex gap-6">
-
-        <FaLaptopCode className="text-[40px] text-[#C7B8BE]" />
-
-        <div>
-
-            <h3 className="text-[24px] font-bold tracking-[4px] text-black">
-            Creative Technology
-            </h3>
-
-            <p className="mt-6 max-w-md text-[20px] leading-relaxed text-[#1B1B1B]">
-            I love combining creativity and technology to create impactful digital experiences, from web platforms and applications to innovative tech-based ideas.
-            </p>
-
-        </div>
-
-        </div>
-
-    </div>
-
-    </div>
-
-    {/* READ MORE */}
-    <div className="mt-20 flex justify-center">
-
-    <a
-        href="/about-me"
-        className="
-        border-l-2
-        border-r-2
-        border-pink-500
-        px-8
-        py-2
-        text-[24px]
-        font-semibold
-        tracking-wide
-        text-pink-500
-        transition
-        hover:scale-105
-        "
-    >
-        READ MORE
-    </a>
-
-    </div>
-
-    {/* SKILLS */}
-    <div id="skills" className="mt-25">
-
-    {/* TITLE */}
-    <div className="flex justify-center">
-
-        <div className="border-4 border-pink-500 px-10 py-3">
-
-        <h2 className="text-[28px] font-bold tracking-[6px] text-[#1B1B1B]">
-            SKILLS
-        </h2>
-
-        </div>
-
-    </div>
-
-    {/* CONTENT */}
-    <div className="mx-auto mt-24 max-w-5xl">
-
-        {/* SUBTITLE USING NOW */}
-        <h3 className="text-[24px] font-bold tracking-[4px] text-[#1B1B1B]">
-        USING NOW:
-        </h3>
-
-        {/* GRID */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-16">
-
-        <div className="flex flex-col items-center">
-        <img
-            src={htmlLogo}
-            alt="HTML"
-            className="w-20 h-20 object-contain"
-        />
-
-        <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
-            HTML5
-        </h4>
-        </div>
-
-        <div className="flex flex-col items-center">
-        <img
-            src={cssLogo}
-            alt="CSS"
-            className="w-20 h-20 object-contain"
-        />
-
-        <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
-            CSS3
-        </h4>
-        </div>
-
-        <div className="flex flex-col items-center">
-        <img
-            src={jsLogo}
-            alt="JavaScript"
-            className="w-20 h-20 object-contain"
-        />
-
-        <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
-            JAVASCRIPT
-        </h4>
-        </div>
-
-        <div className="flex flex-col items-center">
-        <img
-            src={reactLogo}
-            alt="React"
-            className="w-20 h-20 object-contain"
-        />
-
-        <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
-            REACT
-        </h4>
-        </div>
-
-        <div className="flex flex-col items-center">
-        <img
-            src={tailwindLogo}
-            alt="Tailwind"
-            className="w-20 h-20 object-contain"
-        />
-
-        <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
-            Tailwind
-        </h4>
-        </div>
-
-        <div className="flex flex-col items-center">
-        <img
-            src={viteLogo}
-            alt="Vite"
-            className="w-20 h-20 object-contain"
-        />
-
-        <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
-            Vite
-        </h4>
-        </div>
-
-        </div>
-
-        {/* LEARNING */}
-        <div className="mt-28">
-
-        <h3 className="text-[24px] font-bold tracking-[4px] text-[#1B1B1B]">
-            LEARNING:
-        </h3>
-
-        {/* GRID */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-16">
-
-            {/* NODE JS */}
-            <div className="flex flex-col items-center">
-            <img
-            src={nodejsLogo}
-            alt="HTML"
-            className="w-20 h-20 object-contain"
-            />
-            <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
-                NODE JS
-            </h4>
-
-            </div>
-
-            {/* EXPRESS */}
-            <div className="flex flex-col items-center">
-
-            <img
-            src={mysqlLogo}
-            alt="HTML"
-            className="w-20 h-20 object-contain"
-            />
-
-            <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
-                MySQL
-            </h4>
-
-            </div>
-
-            {/* MONGODB */}
-            <div className="flex flex-col items-center">
-            <img
-            src={mongodbLogo}
-            alt="HTML"
-            className="w-20 h-20 object-contain"
-            />
-            <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
-                MONGODB
-            </h4>
-
-            </div>
-
-            {/* PYTHON */}
-            <div className="flex flex-col items-center">
-            <img
-            src={pythonLogo}
-            alt="HTML"
-            className="w-20 h-20 object-contain"
-            />
-
-            <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
-                PYTHON
-            </h4>
-
-            </div>
-
-            {/* TypeScript */}
-            <div className="flex flex-col items-center">
-            <img
-            src={TypeScriptLogo}
-            alt="TypeScript"
-            className="w-20 h-20 object-contain"
-            />
-
-            <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
-                TypeScript
-            </h4>
-
-            </div>
-
-            {/* Nextjs */}
-            <div className="flex flex-col items-center">
-            <img
-            src={NextjsLogo}
-            alt="Nextjs"
-            className="w-20 h-20 object-contain"
-            />
-
-            <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
-                Nextjs
-            </h4>
-
-            </div>
-
-            {/* TensorFlow */}
-            <div className="flex flex-col items-center">
-            <img
-            src={TensorflowLogo}
-            alt="TensorFlow"
-            className="w-20 h-20 object-contain"
-            />
-
-            <h4 className="mt-4 text-[20px] tracking-[3px] text-[#1B1B1B]">
-                TensorFlow
-            </h4>
-
-            </div>
-
-        </div>
-
-        </div>
-
-    </div>
-
-    </div>
-
+      </div>
     </section>
-
-    
-    
-
   )
 }
 
