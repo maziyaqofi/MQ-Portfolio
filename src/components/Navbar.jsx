@@ -4,7 +4,7 @@ import "./Navbar.css"
 
 const menuItems = [
   { label: "Home", href: "/" },
-  { label: "Project", href: "/portofolio" },
+  { label: "Project", href: "/projects" },
   { label: "Certificate", href: "/certificate" },
   { label: "Documentation", href: "/documentation" },
 ]

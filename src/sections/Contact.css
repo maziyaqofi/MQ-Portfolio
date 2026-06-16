@@ -131,7 +131,7 @@
   outline: none;
   padding: 0.85rem 1rem;
   background: rgba(255, 255, 255, 0.21);
-  color: white;
+  color: #17172e;
   font: inherit;
   transition:
     border-color 180ms ease,
@@ -153,14 +153,23 @@
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.62);
+  color: #17172e;
+  opacity: 1;
 }
 
 .contact-form input:focus,
+.contact-form input:focus-visible,
+.contact-form input:active,
 .contact-form textarea:focus,
-.contact-form select:focus {
-  border-color: white;
-  background: rgba(255, 255, 255, 0.24);
+.contact-form textarea:focus-visible,
+.contact-form textarea:active,
+.contact-form select:focus,
+.contact-form select:focus-visible,
+.contact-form select:active {
+  border-color: #e32277;
+  outline: none;
+  background: rgba(255, 255, 255, 0.21);
+  box-shadow: none;
 }
 
 .contact-form button {
@@ -172,8 +181,8 @@
   border: 0;
   border-radius: 999px;
   padding: 0.55rem 1.35rem 0.55rem 0.55rem;
-  background: white;
-  color: #17172e;
+  background: #e32277;
+  color: white;
   font: inherit;
   font-weight: 700;
   cursor: pointer;
@@ -185,8 +194,8 @@
 .contact-form button span {
   width: 2.5rem;
   height: 2.5rem;
-  background: #17172e;
-  color: white;
+  background: white;
+  color: #e32277;
 }
 
 .contact-form button:hover {

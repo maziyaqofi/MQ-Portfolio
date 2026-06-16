@@ -1,21 +1,16 @@
+import { Route, Routes, useParams } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Hero from "./sections/Hero"
 import ITBerries from "./sections/ITBerries"
 import AboutSkills from "./sections/AboutSkills"
 import LogoMarquee from "./sections/LogoMarquee"
-import Portfolio from "./sections/Portfolio"
+import Projects from "./sections/Projects"
 import PortfolioPage from "./sections/PortfolioPage"
+import ProjectDetailPage from "./sections/ProjectDetailPage"
 import CertificatePage from "./sections/CertificatePage"
 import DocumentationPage from "./sections/DocumentationPage"
 import Contact from "./sections/Contact"
 import Footer from "./sections/Footer"
-
-const pageComponents = {
-  "/portofolio": PortfolioPage,
-  "/certificate": CertificatePage,
-  "/documentation": DocumentationPage,
-  "/contact": Contact,
-}
 
 function PageLayout({ children }) {
   return (
@@ -27,18 +22,7 @@ function PageLayout({ children }) {
   )
 }
 
-function App() {
-  const currentPath = window.location.pathname
-  const PageComponent = pageComponents[currentPath]
-
-  if (PageComponent) {
-    return (
-      <PageLayout>
-        <PageComponent />
-      </PageLayout>
-    )
-  }
-
+function HomePage() {
   return (
     <div id="home">
       <Navbar />
@@ -46,10 +30,62 @@ function App() {
       <ITBerries />
       <AboutSkills />
       <LogoMarquee />
-      <Portfolio />
+      <Projects />
       <Contact />
       <Footer />
     </div>
+  )
+}
+
+function ProjectDetailRoute() {
+  const { slug } = useParams()
+
+  return (
+    <PageLayout>
+      <ProjectDetailPage slug={slug} />
+    </PageLayout>
+  )
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route
+        path="/projects"
+        element={
+          <PageLayout>
+            <PortfolioPage />
+          </PageLayout>
+        }
+      />
+      <Route path="/projects/:slug" element={<ProjectDetailRoute />} />
+      <Route
+        path="/certificate"
+        element={
+          <PageLayout>
+            <CertificatePage />
+          </PageLayout>
+        }
+      />
+      <Route
+        path="/documentation"
+        element={
+          <PageLayout>
+            <DocumentationPage />
+          </PageLayout>
+        }
+      />
+      <Route
+        path="/contact"
+        element={
+          <PageLayout>
+            <Contact />
+          </PageLayout>
+        }
+      />
+      <Route path="*" element={<HomePage />} />
+    </Routes>
   )
 }
 
