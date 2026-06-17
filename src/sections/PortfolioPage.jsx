@@ -64,12 +64,9 @@ function PortfolioPage() {
                     className="h-full w-full object-cover transition duration-300 group-hover:scale-95 group-hover:object-contain"
                   />
 
-                  <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-[#0D111A]/85 px-5 py-3">
+                  <div className="absolute inset-x-0 bottom-0 bg-[#0D111A]/85 px-5 py-3">
                     <span className="text-[12px] font-semibold uppercase tracking-[3px] text-pink-300">
                       {project.category}
-                    </span>
-                    <span className="text-[12px] font-semibold text-[#F5D3DC]">
-                      {project.status}
                     </span>
                   </div>
                 </div>

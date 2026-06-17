@@ -52,9 +52,6 @@ function ProjectDetailPage({ slug }) {
                 <span className="rounded-full bg-white/10 px-4 py-1 text-[13px] font-semibold text-gray-200">
                   {project.year}
                 </span>
-                <span className="rounded-full bg-white/10 px-4 py-1 text-[13px] font-semibold text-gray-200">
-                  {project.status}
-                </span>
               </div>
 
               <h1 className="mt-6 text-[42px] font-extrabold leading-tight text-white md:text-[56px]">
@@ -64,6 +61,15 @@ function ProjectDetailPage({ slug }) {
               <p className="mt-6 text-[18px] leading-relaxed text-[#F5D3DC]">
                 {project.description}
               </p>
+
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-8 inline-flex rounded-full bg-pink-400 px-6 py-3 text-[15px] font-bold text-white transition hover:bg-pink-500"
+              >
+                View Project
+              </a>
             </div>
 
             <div className="overflow-hidden rounded-lg bg-[#161B22]">
@@ -100,10 +106,17 @@ function ProjectDetailPage({ slug }) {
                 </div>
                 <div>
                   <dt className="text-[13px] font-semibold uppercase tracking-[3px] text-gray-500">
-                    Status
+                    Link Project
                   </dt>
-                  <dd className="mt-1 text-[17px] font-semibold">
-                    {project.status}
+                  <dd className="mt-2">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-[15px] font-semibold text-pink-300 transition hover:text-white"
+                    >
+                      Open project
+                    </a>
                   </dd>
                 </div>
               </dl>
@@ -131,20 +144,7 @@ function ProjectDetailPage({ slug }) {
               </h2>
 
               <p className="mt-5 text-[17px] leading-relaxed text-gray-300">
-                {project.title} is part of my portfolio exploration in{" "}
-                {project.category.toLowerCase()} technology. This project
-                focuses on translating a practical problem into a clear digital
-                experience through structured interface design, thoughtful user
-                flow, and reliable implementation choices.
-              </p>
-
-              <p className="mt-5 text-[17px] leading-relaxed text-gray-300">
-                The main idea behind this project is to build a product that is
-                easy to understand, useful for its target users, and strong
-                enough to communicate both technical thinking and product
-                awareness. It also supports my broader direction toward becoming
-                a software engineer with a stronger focus on healthtech and
-                impactful digital systems.
+                {project.overview}
               </p>
 
               <div className="mt-10 grid gap-5 md:grid-cols-2">
@@ -153,8 +153,7 @@ function ProjectDetailPage({ slug }) {
                     Focus
                   </h3>
                   <p className="mt-3 text-[15px] leading-relaxed text-gray-300">
-                    Clear user flow, readable visual structure, and practical
-                    feature planning based on the project category.
+                    {project.focus}
                   </p>
                 </div>
                 <div className="rounded-lg border border-pink-400/20 p-5">
@@ -162,8 +161,7 @@ function ProjectDetailPage({ slug }) {
                     Role
                   </h3>
                   <p className="mt-3 text-[15px] leading-relaxed text-gray-300">
-                    Product exploration, UI design, frontend planning, and
-                    technology selection for the project concept.
+                    {project.role}
                   </p>
                 </div>
               </div>

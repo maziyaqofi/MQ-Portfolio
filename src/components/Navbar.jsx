@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { HiMenuAlt3, HiX } from "react-icons/hi"
+import { Link, useLocation } from "react-router-dom"
 import "./Navbar.css"
 
 const menuItems = [
@@ -12,7 +13,7 @@ const menuItems = [
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isNavbarHidden, setIsNavbarHidden] = useState(false)
-  const currentPath = window.location.pathname
+  const { pathname: currentPath } = useLocation()
 
   useEffect(() => {
     let previousScrollY = window.scrollY
@@ -41,32 +42,34 @@ function Navbar() {
   return (
     <nav className={isNavbarHidden ? "navbar navbar--hidden" : "navbar"}>
       <div className="navbar__inner">
-        <a href="/" className="navbar__logo" aria-label="Go to home page">
+        <Link to="/" className="navbar__logo" aria-label="Go to home page">
           <span className="text-pink-500">Maziya</span>
           <span className="text-black">Qofi</span>
-        </a>
+        </Link>
 
         <ul className="navbar__menu">
           {menuItems.map((item) => (
             <li key={item.label}>
-              <a
-                href={item.href}
+              <Link
+                to={item.href}
                 className={
-                  currentPath === item.href
+                  currentPath === item.href ||
+                  (item.href === "/projects" &&
+                    currentPath.startsWith("/projects/"))
                     ? "navbar__link navbar__link--active"
                     : "navbar__link"
                 }
               >
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
         <div className="navbar__actions">
-          <a href="/contact" className="navbar__contact">
+          <Link to="/contact" className="navbar__contact">
             CONTACT ME
-          </a>
+          </Link>
         </div>
 
         <button
@@ -82,22 +85,28 @@ function Navbar() {
 
       <div className={isMenuOpen ? "navbar__mobile-menu navbar__mobile-menu--open" : "navbar__mobile-menu"}>
         {menuItems.map((item) => (
-          <a
+          <Link
             key={item.label}
-            href={item.href}
+            to={item.href}
             className={
-              currentPath === item.href
+              currentPath === item.href ||
+              (item.href === "/projects" && currentPath.startsWith("/projects/"))
                 ? "navbar__mobile-link navbar__mobile-link--active"
                 : "navbar__mobile-link"
             }
+            onClick={() => setIsMenuOpen(false)}
           >
             {item.label}
-          </a>
+          </Link>
         ))}
 
-        <a href="/contact" className="navbar__mobile-contact">
+        <Link
+          to="/contact"
+          className="navbar__mobile-contact"
+          onClick={() => setIsMenuOpen(false)}
+        >
           CONTACT ME
-        </a>
+        </Link>
       </div>
     </nav>
   )
