@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
-import { featuredProjects, getProjectPath } from "../data/projects"
+import ProjectCard from "../components/ProjectCard"
+import { featuredProjects } from "../data/projects"
 
 function Projects() {
   return (
@@ -14,49 +15,7 @@ function Projects() {
 
       <div className="mt-24 grid grid-cols-1 gap-10 md:grid-cols-2">
         {featuredProjects.map((project) => (
-          <Link
-            key={project.title}
-            to={getProjectPath(project)}
-            className="block overflow-hidden rounded-lg bg-[#161B22]"
-          >
-            <div className="h-[220px] overflow-hidden">
-              <img
-                src={project.image}
-                alt={`${project.title} project preview`}
-                className="h-full w-full object-cover"
-              />
-            </div>
-
-            <div className="p-6">
-              <div className="flex flex-wrap items-center gap-3">
-                <span className="rounded-full bg-pink-400/20 px-4 py-1 text-[13px] font-semibold text-pink-300">
-                  {project.category}
-                </span>
-                <span className="text-[13px] font-semibold text-gray-400">
-                  {project.year}
-                </span>
-              </div>
-
-              <h3 className="mt-4 text-[24px] font-bold text-white">
-                {project.title}
-              </h3>
-
-              <p className="mt-4 text-[16px] leading-relaxed text-gray-300">
-                {project.description}
-              </p>
-
-              <div className="mt-6 flex flex-wrap gap-3">
-                {project.technologies.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full bg-pink-400/20 px-4 py-1 text-[14px] text-pink-300"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </Link>
+          <ProjectCard key={project.id} project={project} compact />
         ))}
       </div>
 

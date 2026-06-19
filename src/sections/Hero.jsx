@@ -58,27 +58,25 @@ function Hero() {
       <div className="hero__desktop">
         <div className="hero__content">
           <div className="hero__copy">
-            <p className="hero__eyebrow">
-              Hi, I'm
-            </p>
+            <p className="hero__eyebrow">Hi, I'm</p>
 
             <h1 className="hero__title">
               Maziya <span className="text-pink-400">Ats Tsaqofi</span>
             </h1>
 
-            <p className="hero__role">
-              Software Engineer & AI Tech Enthusiast
-            </p>
+            <p className="hero__role">Software Engineer & AI Tech Enthusiast</p>
 
-            
             <p className="hero__description">
-              I am an Informatics Engineering student and aspiring Software Engineer with a strong interest in AI innovation and digital product development. I enjoy building modern applications and exploring technologies that combine functionality, problem-solving, and meaningful user experiences.
+              I am an Informatics Engineering student and aspiring Software
+              Engineer with a strong interest in AI innovation and digital
+              product development. I enjoy building modern applications and
+              exploring technologies that combine functionality,
+              problem-solving, and meaningful user experiences.
             </p>
           </div>
 
           <DownloadCV variant="desktop" />
           <SocialLinks variant="desktop" />
-          
         </div>
 
         <div className="hero__portrait-panel">
@@ -101,9 +99,7 @@ function Hero() {
 
         <div className="hero__mobile-card">
           <div className="hero__mobile-copy">
-            <p className="hero__mobile-eyebrow">
-              Hi, I'm
-            </p>
+            <p className="hero__mobile-eyebrow">Hi, I'm</p>
 
             <h1 className="hero__mobile-title">
               Maziya <span className="text-pink-400">Ats Tsaqofi</span>

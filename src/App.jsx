@@ -12,6 +12,13 @@ import DocumentationPage from "./sections/DocumentationPage"
 import Contact from "./sections/Contact"
 import Footer from "./sections/Footer"
 
+const pageRoutes = [
+  { path: "/projects", Component: PortfolioPage },
+  { path: "/certificate", Component: CertificatePage },
+  { path: "/documentation", Component: DocumentationPage },
+  { path: "/contact", Component: Contact },
+]
+
 function PageLayout({ children }) {
   return (
     <div id="top">
@@ -51,39 +58,18 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route
-        path="/projects"
-        element={
-          <PageLayout>
-            <PortfolioPage />
-          </PageLayout>
-        }
-      />
+      {pageRoutes.map(({ path, Component }) => (
+        <Route
+          key={path}
+          path={path}
+          element={
+            <PageLayout>
+              <Component />
+            </PageLayout>
+          }
+        />
+      ))}
       <Route path="/projects/:slug" element={<ProjectDetailRoute />} />
-      <Route
-        path="/certificate"
-        element={
-          <PageLayout>
-            <CertificatePage />
-          </PageLayout>
-        }
-      />
-      <Route
-        path="/documentation"
-        element={
-          <PageLayout>
-            <DocumentationPage />
-          </PageLayout>
-        }
-      />
-      <Route
-        path="/contact"
-        element={
-          <PageLayout>
-            <Contact />
-          </PageLayout>
-        }
-      />
       <Route path="*" element={<HomePage />} />
     </Routes>
   )

@@ -10,6 +10,13 @@ const menuItems = [
   { label: "Documentation", href: "/documentation" },
 ]
 
+function isActivePath(currentPath, href) {
+  return (
+    currentPath === href ||
+    (href !== "/" && currentPath.startsWith(`${href}/`))
+  )
+}
+
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isNavbarHidden, setIsNavbarHidden] = useState(false)
@@ -53,9 +60,7 @@ function Navbar() {
               <Link
                 to={item.href}
                 className={
-                  currentPath === item.href ||
-                  (item.href === "/projects" &&
-                    currentPath.startsWith("/projects/"))
+                  isActivePath(currentPath, item.href)
                     ? "navbar__link navbar__link--active"
                     : "navbar__link"
                 }
@@ -89,8 +94,7 @@ function Navbar() {
             key={item.label}
             to={item.href}
             className={
-              currentPath === item.href ||
-              (item.href === "/projects" && currentPath.startsWith("/projects/"))
+              isActivePath(currentPath, item.href)
                 ? "navbar__mobile-link navbar__mobile-link--active"
                 : "navbar__mobile-link"
             }

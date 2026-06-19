@@ -12,9 +12,18 @@ import truthlyImage from "../assets/truthly.svg"
 import astratapImage from "../assets/astratap.png"
 import medilinkImage from "../assets/medilink.png"
 import wardrobeImage from "../assets/smart-wardrobe.png"
+import fokusroomImage from "../assets/fokusroom.png"
+import tickrImage from "../assets/tickr.png"
+import dailyjournalImage from "../assets/dailyjournal.png"
+import aipromptImage from "../assets/aiprompt.jpeg"
+import propertyImage from "../assets/property.jpeg"
+import mathmindImage from "../assets/mathmindai.jpeg"
+import bankmlImage from "../assets/bankml.png"
+import artsyImage from "../assets/artsystudio.png"
+import oceImage from "../assets/oce.svg"
+import bankingImage from "../assets/bankinglite.png"
+import smartclinicImage from "../assets/smartclinic.jpeg"
 
-const tickrImage = modalinImage
-const dailyjournalImage = gunungkuImage
 
 export const categories = [
   "All",
@@ -125,7 +134,7 @@ const baseProjects = [
     title: "Fokus Room",
     category: "Education",
     year: "2025",
-    image: gunungkuImage,
+    image: fokusroomImage,
     description:
       "A productivity and learning space app concept that helps users organize focus sessions, study routines, and task flow.",
     technologies: ["React", "Productivity", "UX"],
@@ -198,7 +207,7 @@ const baseProjects = [
     title: "Prediksi Pelanggan",
     category: "Finance",
     year: "2025",
-    image: medilinkImage,
+    image: bankmlImage,
     description:
       "A data analysis project for predicting customer behavior, supporting business decisions through simple machine learning workflows.",
     technologies: ["Python", "Data Analysis", "ML"],
@@ -208,7 +217,7 @@ const baseProjects = [
     title: "AI Prompt Studio",
     category: "Others",
     year: "2026",
-    image: medilinkImage,
+    image: aipromptImage,
     description:
       "A creative AI workspace concept for organizing prompts, testing ideas, and improving AI-assisted production workflows.",
     technologies: ["AI", "Prompting", "Product Design"],
@@ -218,7 +227,7 @@ const baseProjects = [
     title: "Math Mind AI",
     category: "Education",
     year: "2026",
-    image: medilinkImage,
+    image: mathmindImage,
     description:
       "An AI-based education concept that helps learners understand math problems through guided explanation and practice flow.",
     technologies: ["AI", "Education", "Math"],
@@ -228,7 +237,7 @@ const baseProjects = [
     title: "Property Listing App",
     category: "Real Estate",
     year: "2025",
-    image: medilinkImage,
+    image: propertyImage,
     description:
       "A property listing app concept for browsing homes, comparing details, and presenting real estate information clearly.",
     technologies: ["Real Estate", "Listing", "UI"],
@@ -238,7 +247,7 @@ const baseProjects = [
     title: "Artsy Studio Web",
     category: "Entertainment",
     year: "2025",
-    image: medilinkImage,
+    image: artsyImage,
     description:
       "A creative studio website concept focused on visual identity, portfolio presentation, and polished digital storytelling.",
     technologies: ["Branding", "Web Design", "UI"],
@@ -259,7 +268,7 @@ const baseProjects = [
     title: "Oce Design Web",
     category: "Entertainment",
     year: "2025",
-    image: medilinkImage,
+    image: oceImage,
     description:
       "A design portfolio web concept for showcasing creative work, service identity, and visual brand presentation.",
     technologies: ["Web Design", "Portfolio", "Branding"],
@@ -269,7 +278,7 @@ const baseProjects = [
     title: "Banking Lite",
     category: "Finance",
     year: "2026",
-    image: medilinkImage,
+    image: bankingImage,
     description:
       "A simple banking interface concept for balance overview, transaction history, and lightweight financial management.",
     technologies: ["Finance", "Dashboard", "UI/UX"],
@@ -279,7 +288,7 @@ const baseProjects = [
     title: "Smart Clinic",
     category: "Medical",
     year: "2025",
-    image: medilinkImage,
+    image: smartclinicImage,
     description:
       "A clinic management system designed to support patient registration, medical records, prescriptions, and healthcare workflows.",
     technologies: ["Java", "JavaFX", "MySQL"],
@@ -466,6 +475,275 @@ const projectDetails = {
       "Website Management, Search Engine Optimization (SEO), Digital Growth Strategy, Team Leadership, and Content Management.",
     role:
       "Project Leader & Web Developer. Led a development team, managed website enhancement initiatives, implemented SEO strategies, coordinated maintenance activities, and contributed to the platform's long-term growth and performance.",
+  },
+  12: {
+    title: "Truthly",
+    category: "Others",
+    year: "2023",
+    technologies: ["Blockchain", "Laravel", "PHP", "MySQL", "JavaScript"],
+    link: "https://github.com/maziyaqofi",
+    description:
+      "Truthly is a blockchain-powered fact-checking platform designed to help users verify the authenticity of online information and identify potential hoaxes.",
+    overview:
+      "Truthly was developed by a team of four members during the Samsung Innovation Campus Challenge. The project addresses the growing problem of misinformation and fake news circulating across digital platforms. Users can simply copy and paste a link from social media, news websites, or other online sources into the Truthly platform, where the information is analyzed and verified. By leveraging blockchain concepts, the platform aims to improve transparency, trust, and accountability in the verification process. The solution was designed to make fact-checking more accessible, enabling the public to quickly assess the credibility of information before sharing or acting upon it.",
+    focus:
+      "Blockchain Applications, Misinformation Detection, Digital Trust, Information Verification, and Social Impact Technology.",
+    role:
+      "Full-Stack Developer & Team Member (Team of 4 Members). Contributed to solution design, feature development, system planning, and presentation of the innovation during the Samsung Innovation Challenge.",
+  },
+  13: {
+    title: "Tickr",
+    category: "Others",
+    year: "2022",
+    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    link: "https://github.com/maziyaqofi",
+    description:
+      "Tickr is a student-focused task management platform designed to help users organize assignments, deadlines, and daily activities through an engaging interface.",
+    overview:
+      "Tickr was developed as a university project in collaboration with classmates. The platform was designed to address productivity challenges commonly faced by students by providing a simple and visually appealing task management experience. Users can create, manage, and track their academic tasks and personal activities in one place. Unlike generic to-do list applications, Tickr focuses on the needs of university students, emphasizing usability, motivation, and a modern interface to encourage better organization and time management.",
+    focus:
+      "Web Application Development, Productivity Tools, User Experience Design, Student Productivity, and Interface Design.",
+    role:
+      "Front-End Developer & Team Member. Contributed to interface development, feature implementation, and collaboration throughout the design and development process.",
+  },
+  14: {
+    title: "Daily Journal Web",
+    category: "Others",
+    year: "2022",
+    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    link: "https://github.com/maziyaqofi",
+    description:
+      "A simple web-based journaling application developed to practice CRUD operations and fundamental web development concepts.",
+    overview:
+      "Daily Journal Web was developed as part of a Web Programming course project. The application allows users to create, read, update, and delete journal entries through a simple and intuitive interface. The primary objective of the project was to strengthen understanding of CRUD functionality, database integration, and basic web application architecture. Through this project, fundamental concepts of full-stack web development, including data management and user interaction, were successfully implemented.",
+    focus:
+      "CRUD Operations, Web Programming Fundamentals, Database Integration, Full-Stack Development, and Data Management.",
+    role:
+      "Full-Stack Developer. Designed and developed the entire application, including database structure, CRUD functionality, and user interface implementation.",
+  },
+  15: {
+    title: "AstraTap",
+    category: "Others",
+    year: "2026",
+    technologies: [
+      "Figma",
+      "NFC (Near Field Communication)",
+      "AstraPay Integration",
+      "Product Design",
+      "Fintech Architecture",
+    ],
+    link: "https://github.com/maziyaqofi",
+    description:
+      "AstraTap is an NFC-based payment solution that enables motorcycle users to complete fuel transactions with a single tap, eliminating the need to open apps, scan QR codes, or carry cash.",
+    overview:
+      "AstraTap was developed as a fintech innovation concept designed to simplify fuel payments within the Astra ecosystem. The solution utilizes NFC technology integrated with AstraPay, allowing users to link their vehicle to a secure NFC tag and complete transactions through a single tap. The project addresses common pain points faced by drivers, such as handling cash, opening payment applications, or scanning QR codes during fueling. Beyond fuel payments, AstraTap was envisioned as a digital vehicle identity that could support future services including smart parking, vehicle maintenance, spare part purchases, loyalty programs, and membership services. The concept focuses on creating a seamless, secure, and efficient payment experience for everyday mobility.",
+    focus:
+      "Fintech Innovation, Digital Payments, NFC Technology, Product Design, User Experience, and Smart Mobility Solutions.",
+    role:
+      "Product Designer & Software Engineer. Led the ideation process, designed the user journey and payment ecosystem, developed the product concept, and created the system architecture and user experience for the AstraTap solution.",
+  },
+  16: {
+    title: "MediLink Rescue AI",
+    category: "Medical",
+    year: "2026",
+    technologies: [
+      "Next.js",
+      "Node.js",
+      "PostgreSQL",
+      "Gemini AI",
+      "QR Code Technology",
+      "GitHub",
+    ],
+    link: "https://github.com/maziyaqofi",
+    description:
+      "MediLink Rescue AI is a digital medical identity platform that enables healthcare professionals to access critical patient information through a QR code during emergency situations.",
+    overview:
+      "MediLink Rescue AI was developed to address the challenge of accessing essential patient information during emergencies, especially when patients are unconscious or unable to communicate. The platform allows users to securely store medical information such as blood type, allergies, medical history, current medications, and emergency contacts. Each user receives a unique QR code that can be accessed by healthcare providers during critical situations. To improve efficiency, AI technology automatically generates concise medical summaries, helping medical personnel quickly understand the patient's condition and make informed decisions. The solution aims to enhance emergency response, improve patient safety, and support faster medical treatment through accessible digital health records.",
+    focus:
+      "Health Technology, Artificial Intelligence, Emergency Response Systems, Digital Health Records, QR Code Technology, and Patient Safety.",
+    role:
+      "Full-Stack Developer, AI Engineer & Product Designer. Led the end-to-end development process, including problem validation, system architecture design, AI integration, database design, user experience development, and product presentation for innovation and competition purposes.",
+  },
+  17: {
+    title: "Bank Customer Segmentation and Classification Using Machine Learning",
+    category: "Finance",
+    year: "2025",
+    technologies: [
+      "Python",
+      "Google Colab",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "Matplotlib",
+      "Seaborn",
+    ],
+    link: "https://github.com/maziyaqofi",
+    description:
+      "A machine learning project that segments bank customers based on transaction behavior and predicts customer groups using classification models.",
+    overview:
+      "This project was developed to analyze banking customer behavior through a combination of clustering and classification techniques. The first stage focused on customer segmentation by grouping individuals with similar characteristics, such as transaction activity, account balance, age, occupation, and transaction duration. After identifying meaningful customer clusters, a classification model was built to automatically predict the segment of new customers without repeating the clustering process. The project involved data preprocessing, exploratory analysis, customer segmentation, cluster interpretation, and predictive modeling using Decision Tree and Random Forest algorithms. The best-performing model achieved approximately 98% accuracy, demonstrating the effectiveness of machine learning in customer profiling and decision support within the banking sector.",
+    focus:
+      "Machine Learning, Customer Segmentation, Classification, Data Mining, Predictive Analytics, and Financial Data Analysis.",
+    role:
+      "Machine Learning Engineer & Data Analyst. Performed data preprocessing, clustering analysis, customer segmentation, model training, performance evaluation, and interpretation of customer behavior patterns using machine learning techniques.",
+  },
+  18: {
+    title: "AI Prompt Studio",
+    category: "Others",
+    year: "2026",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Generative AI",
+      "Prompt Engineering",
+      "GitHub",
+    ],
+    link: "https://github.com/maziyaqofi",
+    description:
+      "AI Prompt Studio is a web platform that helps users analyze, improve, and optimize AI prompts to generate more accurate and effective results.",
+    overview:
+      "AI Prompt Studio was developed as part of a Generative AI learning project to address a common challenge faced by AI users: poorly structured prompts. The platform evaluates prompts across multiple dimensions, including clarity, specificity, context, target audience, and goal definition. Based on the analysis, the system provides actionable recommendations and generates improved versions of the original prompt. Through this project, I explored how prompt quality directly impacts AI performance and learned the importance of effective human-AI collaboration. The platform demonstrates how AI can act not only as a content generator but also as a design assistant, validator, and productivity partner in modern workflows.",
+    focus:
+      "Generative AI, Prompt Engineering, Human-AI Collaboration, AI Evaluation Systems, User Experience, and AI-Assisted Workflows.",
+    role:
+      "AI Engineer & Full-Stack Developer. Designed and developed the platform, implemented prompt evaluation logic, integrated generative AI capabilities, and translated prompt engineering concepts into a practical tool for AI users.",
+  },
+  19: {
+    title: "MathMind AI",
+    category: "Education",
+    year: "2026",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Amazon Bedrock",
+      "AWS Lambda",
+      "DynamoDB",
+      "Amazon S3",
+      "API Gateway",
+      "AWS Cloud Services",
+    ],
+    link: "https://github.com/maziyaqofi",
+    description:
+      "MathMind AI is an AI-powered educational game that helps children learn basic mathematics through interactive quizzes and personalized feedback.",
+    overview:
+      "MathMind AI was developed as the final project of the AWS Cloud Computing and Generative AI learning path offered by Dicoding Indonesia and Amazon Web Services (AWS). The platform transforms basic arithmetic learning into an engaging experience through interactive challenges covering addition, subtraction, multiplication, and division. After each learning session, an AI tutor named Milo analyzes student performance and generates personalized feedback to help learners understand their strengths and identify areas for improvement. The project combines cloud computing, generative AI, and learning analytics to create a scalable educational platform that supports adaptive learning and progress tracking. Through this project, I applied AWS cloud services and AI technologies to solve real-world educational challenges in a practical and meaningful way.",
+    focus:
+      "Generative AI, Cloud Computing, Educational Technology (EdTech), Learning Analytics, Personalized Learning, and Full-Stack Development.",
+    role:
+      "Cloud & AI Developer. Designed and developed the application, integrated AWS cloud services, implemented AI-powered feedback generation, and built the learning analytics workflow to enhance student engagement and learning outcomes.",
+  },
+  20: {
+    title: "Property Listing App",
+    category: "Real Estate",
+    year: "2026",
+    technologies: [
+      "Next.js 14",
+      "TypeScript",
+      "Tailwind CSS",
+      "localStorage",
+      "Kiro AI",
+      "Claude",
+      "Gemini",
+      "NotebookLM",
+    ],
+    link: "https://github.com/maziyaqofi",
+    description:
+      "A property marketplace web application that allows sellers to manage property listings and buyers to search, browse, and filter properties through a simple and intuitive interface.",
+    overview:
+      "Property Listing App was developed as the final project for the Spec-Driven Development with Kiro course, a collaboration between Dicoding Indonesia and Amazon Web Services (AWS). Inspired by marketplace platforms such as OLX, the application enables property sellers to create, update, and manage listings while helping buyers discover properties through search and filtering features. The project was built using a Spec-Driven Development approach, where requirements, design specifications, and development tasks were translated into implementation through AI-assisted workflows. Throughout development, I collaborated with multiple AI tools, including Kiro AI for code generation and task execution, Claude and Gemini for architectural discussions and business rule validation, and NotebookLM for research and knowledge synthesis. This project strengthened my understanding of human-AI collaboration, modern web development, and AI-assisted software engineering workflows.",
+    focus:
+      "Spec-Driven Development, AI-Assisted Software Engineering, Full-Stack Development, Real Estate Technology, Human-AI Collaboration, and Product Architecture.",
+    role:
+      "Software Architect & Full-Stack Developer. Defined project requirements, managed development scope, designed system architecture, directed AI-assisted implementation workflows, validated business requirements, and delivered the final web application using modern full-stack technologies.",
+  },
+  21: {
+    title: "Artsy Studio Website",
+    category: "Others",
+    year: "2023",
+    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    link: "https://github.com/maziyaqofi",
+    description:
+      "A company profile and product catalog website developed to strengthen Artsy Studio's digital presence and showcase its products to potential customers.",
+    overview:
+      "Artsy Studio Website was developed to support the online presence of Artsy Studio, a store that sells products through e-commerce platforms. The website serves as a centralized platform where visitors can learn about the brand, explore its story, and browse product catalogs in a more professional and organized way. The project focused on creating an attractive and user-friendly experience that helps potential customers discover products while increasing brand credibility and visibility. By combining company profile content with a digital product catalog, the website acts as a bridge between customers and the store's e-commerce channels.",
+    focus:
+      "Website Development, Digital Branding, Product Catalog Management, User Experience Design, and Small Business Digitalization.",
+    role:
+      "Full-Stack Developer. Handled the project from planning and design to development and deployment, including website structure, product catalog implementation, and overall user experience optimization.",
+  },
+  22: {
+    title: "Smart Wardrobe: Temperature & Humidity Monitoring System",
+    category: "Others",
+    year: "2026",
+    technologies: ["ESP32", "DHT22 Sensor", "Arduino IDE", "Blynk IoT", "C++", "Wi-Fi"],
+    link: "https://github.com/maziyaqofi",
+    description:
+      "An IoT-based smart wardrobe system that monitors temperature and humidity levels in real time to help prevent mold growth and protect stored clothing.",
+    overview:
+      "Smart Wardrobe was developed as an Internet of Things (IoT) solution to address humidity-related issues inside wardrobes, which can lead to mold growth, unpleasant odors, and fabric damage. The system continuously monitors temperature and humidity conditions using environmental sensors and sends real-time data to a mobile dashboard. Users can easily track wardrobe conditions and take preventive actions when humidity levels become unsuitable for clothing storage. The project demonstrates how IoT technology can be applied to everyday household challenges by providing a simple, automated, and data-driven monitoring solution.",
+    focus:
+      "Internet of Things (IoT), Embedded Systems, Environmental Monitoring, Sensor Integration, Real-Time Data Monitoring, and Smart Home Technology.",
+    role:
+      "IoT Developer & System Designer. Designed the system architecture, integrated sensors with ESP32, developed the monitoring workflow, implemented real-time data transmission, and tested the solution for practical household use.",
+  },
+  23: {
+    title: "Oce Design Website",
+    category: "Others",
+    year: "2022",
+    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    link: "https://github.com/maziyaqofi",
+    description:
+      "A business website developed for Oce Design to showcase digital services, strengthen brand credibility, and reach both local and international clients.",
+    overview:
+      "Oce Design Website was created as the primary digital presence for Oce Design, a creative agency specializing in social media management, branding, and website development services. The platform was designed to professionally present the agency's portfolio, services, and business information while making it easier for potential clients to connect with the team. A key objective of the project was to create a website that could serve not only domestic clients but also international audiences through a professional and accessible online experience. The project focused on digital branding, service presentation, and business growth through an effective web presence.",
+    focus:
+      "Website Development, Digital Branding, Agency Portfolio Design, Business Digitalization, and User Experience Design.",
+    role:
+      "Full-Stack Developer & Website Designer. Led the development of the agency website, designed the user experience, implemented core features, and optimized the platform to support client acquisition and business growth.",
+  },
+  24: {
+    title: "Banking Lite",
+    category: "Finance",
+    year: "2026",
+    technologies: [
+      "React",
+      "JavaScript/TypeScript",
+      "REST API",
+      "Financial API Integration",
+      "HTML",
+      "CSS",
+    ],
+    link: "https://github.com/maziyaqofi",
+    description:
+      "A digital banking application prototype that integrates multiple financial accounts and APIs into a unified dashboard for easier financial management.",
+    overview:
+      "Banking Lite was developed as a fintech application prototype that enables users to monitor and manage financial information from multiple accounts through a single platform. The system integrates financial APIs to aggregate account data and provide a consolidated view of balances, transactions, and account activities. Inspired by modern digital banking and open banking concepts, the project focuses on improving accessibility and simplifying financial management by reducing the need to switch between different banking applications. The platform demonstrates how API integration can create a more connected and efficient financial experience for users.",
+    focus:
+      "Fintech Development, API Integration, Open Banking Concepts, Financial Data Management, and Full-Stack Development.",
+    role:
+      "Full-Stack Developer. Designed the application architecture, integrated financial APIs, developed account management features, and implemented the user interface for a seamless banking experience.",
+  },
+  25: {
+    title: "Smart Clinic System",
+    category: "Medical",
+    year: "2025",
+    technologies: [
+      "Java",
+      "Java Swing",
+      "MySQL",
+      "JDBC",
+      "Object-Oriented Programming",
+    ],
+    link: "https://github.com/maziyaqofi",
+    description:
+      "A clinic management system designed to streamline healthcare operations, patient services, and administrative workflows through a role-based dashboard.",
+    overview:
+      "Smart Clinic Management System was developed to help clinics and healthcare facilities manage their daily operations more efficiently. The platform provides an integrated dashboard for handling patient registration, medical records, appointments, examinations, prescriptions, and administrative activities. To ensure data security and proper access control, the system implements role-based permissions, allowing different levels of access for administrators, doctors, pharmacists, and other staff members. The project focuses on improving operational efficiency, reducing manual processes, and supporting better healthcare service management through a centralized information system.",
+    focus:
+      "Healthcare Information Systems, Object-Oriented Programming (OOP), Database Management, Role-Based Access Control (RBAC), and Desktop Application Development.",
+    role:
+      "Full-Stack Developer. Designed and developed the entire system, including database architecture, user authentication, role-based authorization, patient management workflows, and healthcare operational modules.",
   },
 }
 
